@@ -19,7 +19,7 @@ public class HelloApplication extends Application {
         root.setFillWidth(false);
 
         TextField textField = new TextField();
-        textField.setText("Type shit");
+        textField.setText("Enter something cool");
         Label label = new Label("Welcome to our project, Code Crafters!");
 
         root.getChildren().addAll(label, textField);
