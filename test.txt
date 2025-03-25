@@ -1,7 +1,5 @@
 hello it's manny
 
-poo 
-
 i've made some changes.
 
 hey it's kimiya
@@ -10,3 +8,4 @@ hey it's kimiya
 
 Hii
 
+I added another line (Kimiya - Tuesday 25th)
