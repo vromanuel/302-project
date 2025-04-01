@@ -54,7 +54,7 @@ public class HelloApplication extends Application {
                 System.out.println(userName);
                 System.out.println(password);
             }
-        });
+        }); // new comment
 
 
         this.userName = userNameField.getCharacters();
