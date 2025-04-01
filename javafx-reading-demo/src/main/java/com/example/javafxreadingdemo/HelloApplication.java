@@ -56,6 +56,7 @@ public class HelloApplication extends Application {
             }
         }); // new comment
 
+        // this is on the quotes branch
 
         this.userName = userNameField.getCharacters();
         authentication.getChildren().addAll(userNameLabel, userNameField, passWordLabel, passWordField, button );
