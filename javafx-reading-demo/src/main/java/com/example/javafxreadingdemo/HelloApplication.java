@@ -49,6 +49,8 @@ public class HelloApplication extends Application {
                 userName = userNameField.getCharacters();
                 password = passWordField.getCharacters();
 
+                // hello
+
                 System.out.println(userName);
                 System.out.println(password);
             }
