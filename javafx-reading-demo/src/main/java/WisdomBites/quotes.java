@@ -1,4 +1,4 @@
-package com.example.javafxreadingdemo;
+package WisdomBites;
 
 public class quotes {
     // comment

@@ -1,4 +1,4 @@
-package com.example.javafxreadingdemo;
+package WisdomBites;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -7,11 +7,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+
 
 public class HelloApplication extends Application {
 
@@ -46,13 +46,21 @@ public class HelloApplication extends Application {
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                userName = userNameField.getCharacters();
-                password = passWordField.getCharacters();
 
-                // hello
 
-                System.out.println(userName);
-                System.out.println(password);
+                boolean loginSuccessful = LoginModel.checkCredentials(userNameField.getCharacters(), passWordField.getCharacters());
+
+                Label successfulLabel;
+                if (loginSuccessful) {
+                    successfulLabel = new Label("Logged in!");
+                }
+                else
+                {
+                    successfulLabel = new Label("unsuccessful!");
+                }
+                authentication.getChildren().addAll(successfulLabel);
+
+
             }
         }); // new comment
 
@@ -72,9 +80,7 @@ public class HelloApplication extends Application {
 
     }
 
-    public static void main(String[] args) {
-        launch();
-    }
+
 }
 
 //// Code Crafters..Let's gooo!!!
