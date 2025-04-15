@@ -1,5 +1,4 @@
-package WisdomBites;
-
+package WisdomBites.Main;
 
 
 public class Main {

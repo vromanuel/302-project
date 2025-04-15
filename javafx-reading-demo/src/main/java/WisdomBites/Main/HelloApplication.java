@@ -1,5 +1,6 @@
-package WisdomBites;
+package WisdomBites.Main;
 
+import WisdomBites.model.LoginModel;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
