@@ -1,28 +1,29 @@
 package WisdomBites.model;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-
-public class SqliteConnection {
+public class DBConnection {
     private static Connection instance = null;
 
-    private SqliteConnection() {
-        String url = "jdbc:sqlite:contacts.db";
+    private DBConnection() {
+        String url = "jdbc:sqlite:WisdomBites.db";
         try {
             instance = DriverManager.getConnection(url);
-
-        } catch(SQLException sqlEx) {
-            System.err.println(sqlEx);
+        } catch(SQLException exception)
+        {
+            System.err.println(exception);
         }
 
     }
 
     public static Connection getInstance() {
-        if (instance == null) {
-            new SqliteConnection();
+        if (instance == null){
+            new DBConnection();
         }
         return instance;
     }
+
 }

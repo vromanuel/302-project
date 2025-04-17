@@ -1,7 +1,9 @@
 module com.example.javafxreadingdemo {
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.sql;
+    requires java.management;
+    requires org.xerial.sqlitejdbc;
+    requires java.desktop;
 
 
     opens WisdomBites to javafx.fxml;

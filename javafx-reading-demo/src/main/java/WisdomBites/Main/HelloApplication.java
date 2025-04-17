@@ -1,6 +1,6 @@
 package WisdomBites.Main;
 
-import WisdomBites.model.LoginModel;
+import WisdomBites.model.*;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -44,13 +44,13 @@ public class HelloApplication extends Application {
 
         Button button = new Button("login!");
 
+        UserDao broski = new UserDao();
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
 
-
                 boolean loginSuccessful = LoginModel.checkCredentials(userNameField.getCharacters(), passWordField.getCharacters());
-
+                broski.registerUser();
                 Label successfulLabel;
                 if (loginSuccessful) {
                     successfulLabel = new Label("Logged in!");
@@ -62,13 +62,25 @@ public class HelloApplication extends Application {
                 authentication.getChildren().addAll(successfulLabel);
 
 
+
             }
         }); // new comment
 
+        Button printButton = new Button("print the contacts!");
+        printButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Contact newContact = new Contact("Manny", "Go", "manny@gmail.com", "0415608250");
+
+
+
+
+            }
+        });
         // this is on the quotes branch
 
         this.userName = userNameField.getCharacters();
-        authentication.getChildren().addAll(userNameLabel, userNameField, passWordLabel, passWordField, button );
+        authentication.getChildren().addAll(userNameLabel, userNameField, passWordLabel, passWordField, button, printButton );
 
         root.getChildren().addAll(label, authentication);
 
