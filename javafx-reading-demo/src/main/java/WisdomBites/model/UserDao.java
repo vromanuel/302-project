@@ -34,7 +34,7 @@ public class UserDao
 
 
     public void registerUser() {
-
+        
         String insertQuery = "INSERT INTO user (firstName, lastName, userName, passWord) VALUES (?,?,?,?)";
         try
         {
