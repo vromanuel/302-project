@@ -70,8 +70,6 @@ public class HelloApplication extends Application {
         printButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Contact newContact = new Contact("Manny", "Go", "manny@gmail.com", "0415608250");
-
 
 
 

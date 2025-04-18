@@ -8,15 +8,20 @@ import java.sql.Statement;
 
 public class UserDao
 {
-    private Connection connection;
+    // Connection to the database
+    private static Connection connection;
 
+    // Initialise the User Data Access object
     public UserDao() {
+        // Gets the instance of the database connection
         connection = DBConnection.getInstance();
         createUserTable();
     }
 
     private void createUserTable() {
+        // Creates a table to store user data if the table does not exist
         try {
+            // Create a statement with an SQL query
             Statement statement = connection.createStatement();
             String query = "CREATE TABLE IF NOT EXISTS user ("
                     + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -26,35 +31,51 @@ public class UserDao
                     + "passWord VARCHAR NOT NULL"
                     + ")";
 
+            // Execute the statement with the query
             statement.execute(query);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    public String registerUser() {
+        // Adds a new user to the table of users
 
-    public void registerUser() {
-        
-        String insertQuery = "INSERT INTO user (firstName, lastName, userName, passWord) VALUES (?,?,?,?)";
         try
         {
+            // SQL to insert the user's firstName, lastName, userName, and passWord
+            String insertQuery = "INSERT INTO user (firstName, lastName, userName, passWord) VALUES (?,?,?,?)";
+
+            // Creates a new PreparedStatement
             PreparedStatement statement = connection.prepareStatement(insertQuery);
+
+            // Add the values to be inserted into the table into the query where appropriate
             statement.setString(1, "Manny");
             statement.setString(2, "Go");
             statement.setString(3, "manny");
             statement.setString(4, "123");
-            statement.executeUpdate();
 
+            statement.executeUpdate();
         } catch(Exception e)
         {
-            e.printStackTrace();
+            // Return the exception message
+            return e.getMessage();
         }
+        return "User successful!";
     }
 
     public static User login(String userNameSubmitted, String passWordSubmitted) {
-        String query = "SELECT FROM user WHERE userName = ?";
+        // Authenticate the username and password for the user, check if the password entered matches that of
+        // the password stored in the database
+
         try{
+            // SQL code to retrieve the userName entered by the user
+            String query = "SELECT FROM user WHERE userName = ?";
+
+            // Create a new PreparedStatement
             PreparedStatement statement = connection.prepareStatement(query);
+
+
             statement.setString(1, userNameSubmitted);
             ResultSet resultSet = statement.executeQuery();
 
@@ -64,8 +85,8 @@ public class UserDao
                 String lastName = resultSet.getString(3);
                 String userName = resultSet.getString(4);
                 String passWord = resultSet.getString(5);
-                User user = new User(firstName, lastName, userName, passWord);
-                user.setId(id);
+                User loggedInUser = new User(firstName, lastName, userName, passWord);
+                loggedInUser.setId(id);
                 return user;
             }
 
