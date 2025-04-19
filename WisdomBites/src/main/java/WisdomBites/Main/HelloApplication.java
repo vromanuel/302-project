@@ -16,6 +16,7 @@ public class HelloApplication extends Application {
 
         UserDao userDao = new UserDao();
 
+        // RAHHHHHHH FINALLY
         SceneController.currentStage = stage;
         SceneController.setStage(stage);
         SceneController.switchScene("login_view.fxml");
