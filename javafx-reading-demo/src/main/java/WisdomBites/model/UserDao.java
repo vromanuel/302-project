@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Objects;
 
 public class UserDao
 {
@@ -28,7 +27,7 @@ public class UserDao
                     + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + "firstName VARCHAR NOT NULL,"
                     + "lastName VARCHAR NOT NULL,"
-                    + "email VARCHAR NOT NULL UNIQUE,"
+                    + "userName VARCHAR NOT NULL UNIQUE,"
                     + "passWord VARCHAR NOT NULL"
                     + ")";
 
@@ -39,60 +38,56 @@ public class UserDao
         }
     }
 
-    public static boolean registerUser(String firstName, String lastName, String email, String passWord) {
+    public String registerUser() {
         // Adds a new user to the table of users
 
         try
         {
-
-            // SQL to insert the user's firstName, lastName, email, and passWord
-            String insertQuery = "INSERT INTO user (firstName, lastName, email, passWord) VALUES (?,?,?,?)";
+            // SQL to insert the user's firstName, lastName, userName, and passWord
+            String insertQuery = "INSERT INTO user (firstName, lastName, userName, passWord) VALUES (?,?,?,?)";
 
             // Creates a new PreparedStatement
             PreparedStatement statement = connection.prepareStatement(insertQuery);
 
             // Add the values to be inserted into the table into the query where appropriate
-            statement.setString(1, firstName);
-            statement.setString(2, lastName);
-            statement.setString(3, email);
-            statement.setString(4, passWord);
+            statement.setString(1, "Manny");
+            statement.setString(2, "Go");
+            statement.setString(3, "manny");
+            statement.setString(4, "123");
 
             statement.executeUpdate();
-
         } catch(Exception e)
         {
             // Return the exception message
-            return false;
+            return e.getMessage();
         }
-        return true;
+        return "User successful!";
     }
 
-    public static User login(String emailSubmitted, String passWordSubmitted) {
-        // Authenticate the email and password for the user, check if the password entered matches that of
+    public static User login(String userNameSubmitted, String passWordSubmitted) {
+        // Authenticate the username and password for the user, check if the password entered matches that of
         // the password stored in the database
 
         try{
-            // SQL code to retrieve the email entered by the user
-            String query = "SELECT * FROM user WHERE email = ?";
+            // SQL code to retrieve the userName entered by the user
+            String query = "SELECT FROM user WHERE userName = ?";
 
             // Create a new PreparedStatement
             PreparedStatement statement = connection.prepareStatement(query);
 
 
-            statement.setString(1, emailSubmitted);
+            statement.setString(1, userNameSubmitted);
             ResultSet resultSet = statement.executeQuery();
 
             if(resultSet.next()) {
                 int id = resultSet.getInt(1);
                 String firstName = resultSet.getString(2);
                 String lastName = resultSet.getString(3);
-                String email = resultSet.getString(4);
+                String userName = resultSet.getString(4);
                 String passWord = resultSet.getString(5);
-                User loggedInUser = new User(firstName, lastName, email, passWord);
+                User loggedInUser = new User(firstName, lastName, userName, passWord);
                 loggedInUser.setId(id);
-
-                if (Objects.equals(passWordSubmitted, passWord))
-                return loggedInUser;
+                return user;
             }
 
         } catch (Exception e)

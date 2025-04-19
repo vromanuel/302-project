@@ -7,19 +7,19 @@ public class User
     private int id;
     private String firstName;
     private String lastName;
-    private String email;
+    private String userName;
     private String passWord;
 
     // Create a Constructor for the User class
     // Inputs:
     //      firstName: String,
     //      lastName: String,
-    //      email: String,
+    //      userName: String,
     //      passWord: String
-    public User(String firstName, String lastName, String email, String passWord) {
+    public User(String firstName, String lastName, String userName, String passWord) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
+        this.userName = userName;
         this.passWord = passWord;
     }
 
@@ -37,8 +37,9 @@ public class User
     public String getLastName() {return lastName;}
     public void setLastName(String lastName) {this.lastName = lastName;}
 
-    public String getEmail() {return email;}
-    public void setEmail(String email) {this.email = email;}
+    // get and set for userName
+    public String getUserName() {return userName;}
+    public void setUserName(String userName) {this.userName = userName;}
 
     // get and set for passWord
     public String getPassWord() {return passWord;}

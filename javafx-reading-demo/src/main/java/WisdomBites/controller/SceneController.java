@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SceneController {
-    public static Stage currentStage;
+    private static Stage currentStage;
 
     public static void setStage(Stage stage) {
         currentStage = stage;
@@ -16,10 +16,8 @@ public class SceneController {
 
     public static void switchScene(String fileName) {
         try {
-
-            Parent root = FXMLLoader.load(SceneController.class.getResource("/WisdomBites/" + fileName));
+            Parent root = FXMLLoader.load(SceneController.class.getResource("/WisdomBites/view/" + fileName));
             currentStage.setScene(new Scene(root));
-            currentStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
