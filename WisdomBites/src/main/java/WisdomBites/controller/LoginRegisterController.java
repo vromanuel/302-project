@@ -32,8 +32,9 @@ public class LoginRegisterController {
     public void loginButtonHandle() {
         String email = loginEmailField.getText();
         String passWord = loginPassWordField.getText();
-        User user = UserDao.login(email, passWord);
 
+        User user = UserDao.login(email, passWord);
+        StateController.setCurrentUser(user);
 
         if(user != null) {
             System.out.println(user.getFirstName());
@@ -72,6 +73,8 @@ public class LoginRegisterController {
 
         loginPane.setVisible(isLogin);
         registerPane.setVisible(!isLogin);
+
+        System.out.println(StateController.currentUser.getFirstName());
 
         TranslateTransition slide = new TranslateTransition(Duration.millis(200), toggleThumb);
         slide.setToX(isLogin ? -15 : 15); // slide left or right

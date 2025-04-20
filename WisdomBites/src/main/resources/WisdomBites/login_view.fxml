@@ -50,14 +50,14 @@
                            -fx-text-fill: black;
                            -fx-prompt-text-fill: white;"/>
 
-                <PasswordField fx:id="loginPasswordField" promptText="Password" styleClass="form-input"
+                <PasswordField fx:id="loginPassWordField" promptText="Password" styleClass="form-input"
                                style="-fx-background-color: #e7b96c;
                                -fx-pref-height: 50;
                                -fx-font-size: 16;
                                -fx-text-fill: black;
                                -fx-prompt-text-fill: white;"/>
 
-                <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" styleClass="form-input"
+                <PasswordField fx:id="confirmPassWordField" promptText="Confirm Password" styleClass="form-input"
                                style="-fx-background-color: #e7b96c;
                                -fx-pref-height: 50;
                                -fx-font-size: 16;
@@ -82,7 +82,7 @@
                 </HBox>
                 <TextField fx:id="registerEmailField" promptText="Email" styleClass="form-input"/>
                 <TextField promptText="Confirm Email" styleClass="form-input"/>
-                <PasswordField fx:id="registerPasswordField" promptText="Password" styleClass="form-input"/>
+                <PasswordField fx:id="registerPassWordField" promptText="Password" styleClass="form-input"/>
                 <Button text="Let’s Go!" onAction="#registerButtonHandle" styleClass="submit-button"/>
             </VBox>
         </StackPane>
