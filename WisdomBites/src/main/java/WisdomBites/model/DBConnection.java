@@ -6,9 +6,15 @@ import java.sql.SQLException;
 
 
 public class DBConnection {
-    private static Connection instance = null;
+    // The class for connecting to the database
+
+    // A variable for the connection is created
+    private static Connection instance;
 
     private DBConnection() {
+        // initialiser for the database connectioe
+
+        // Gets the connection to the WisdomBites database using the URL
         String url = "jdbc:sqlite:WisdomBites.db";
         try {
             instance = DriverManager.getConnection(url);
@@ -20,6 +26,7 @@ public class DBConnection {
     }
 
     public static Connection getInstance() {
+        // If there is no instance, a new DBConnection is initialised
         if (instance == null){
             new DBConnection();
         }

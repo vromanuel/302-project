@@ -22,6 +22,7 @@ public class User
         this.passWord = passWord;
     }
 
+    // get and set methods for each attribute for the User class
     public int getId() {return id;}
 
     public void setId(int id) {

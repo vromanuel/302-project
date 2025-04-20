@@ -13,8 +13,8 @@
 
             prefHeight="400.0" prefWidth="600.0">
 
-        <Label text="Username:" AnchorPane.leftAnchor="25" AnchorPane.topAnchor="25"/>
-        <TextField fx:id="userNameField" AnchorPane.leftAnchor="100" AnchorPane.topAnchor="25"/>
+        <Label text="Email:" AnchorPane.leftAnchor="25" AnchorPane.topAnchor="25"/>
+        <TextField fx:id="emailField" AnchorPane.leftAnchor="100" AnchorPane.topAnchor="25"/>
 
         <Label text="Password:" AnchorPane.leftAnchor="25" AnchorPane.topAnchor="75"/>
         <TextField fx:id="passWordField" AnchorPane.leftAnchor="100" AnchorPane.topAnchor="75"/>

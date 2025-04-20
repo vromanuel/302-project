@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SceneController {
+    // stores the current stage displayed
     public static Stage currentStage;
 
     public static void setStage(Stage stage) {
@@ -15,8 +16,10 @@ public class SceneController {
     }
 
     public static void switchScene(String fileName) {
-        try {
+        // Switches the scene displayed to the user
 
+        // Attempt to access the FXML file for the desired scene, switch to it, and show it to the user
+        try {
             Parent root = FXMLLoader.load(SceneController.class.getResource("/WisdomBites/" + fileName));
             currentStage.setScene(new Scene(root));
             currentStage.show();

@@ -13,10 +13,11 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        // Starts the app
 
+        // Initialises a UserDao object for the app to access the User table and make changes to it
         UserDao userDao = new UserDao();
 
-        // RAHHHHHHH FINALLY
         SceneController.currentStage = stage;
         SceneController.setStage(stage);
         SceneController.switchScene("login_view.fxml");
