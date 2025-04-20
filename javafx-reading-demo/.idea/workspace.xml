@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ac1f805-5018-4000-95ac-5a1870778116" name="Changes" comment="added StudySession model and basic progress tracker structure">
+    <list default="true" id="1ac1f805-5018-4000-95ac-5a1870778116" name="Changes" comment="fixed the bug in StudySession file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WisdomBites.db" beforeDir="false" afterPath="$PROJECT_DIR$/WisdomBites.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/DBConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/ProgressTracker.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/StudySession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/StudySession.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,12 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1745141299764</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed the bug in StudySession file">
+      <option name="closed" value="true" />
+      <created>1745142536575</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745142536575</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added StudySession model and basic progress tracker structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="added StudySession model and basic progress tracker structure" />
+    <MESSAGE value="fixed the bug in StudySession file" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the bug in StudySession file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

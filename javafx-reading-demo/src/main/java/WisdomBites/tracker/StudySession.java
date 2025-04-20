@@ -7,8 +7,8 @@ public class StudySession {
     private LocalDate sessionDate;     // date of study session
     private int durationMinutes;       // how many minutes studied
     private boolean goalCompleted;     // was daily goal completed?
-    private String subject;            // NEW: subject name (e.g., IFB123)
-    private int weekNumber;            // NEW: academic week number (1-8)
+    private String subject;            // subject name (e.g., IFB123)
+    private int weekNumber;            // academic week number (1-8)
 
     // Constructor (no id)
     public StudySession(LocalDate sessionDate, int durationMinutes, boolean goalCompleted, String subject, int weekNumber) {
