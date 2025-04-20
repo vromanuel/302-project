@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ac1f805-5018-4000-95ac-5a1870778116" name="Changes" comment="fixed the bug in StudySession file">
+    <list default="true" id="1ac1f805-5018-4000-95ac-5a1870778116" name="Changes" comment="deleted an unnecessary file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WisdomBites.db" beforeDir="false" afterPath="$PROJECT_DIR$/WisdomBites.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/DBConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/ProgressTracker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/StudySession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/StudySession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/StudySessionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/StudySessionDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +38,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -100,13 +97,22 @@
       <option name="project" value="LOCAL" />
       <updated>1745142536575</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deleted an unnecessary file">
+      <option name="closed" value="true" />
+      <created>1745143628518</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745143628518</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added StudySession model and basic progress tracker structure" />
     <MESSAGE value="fixed the bug in StudySession file" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the bug in StudySession file" />
+    <MESSAGE value="deleted an unnecessary file" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted an unnecessary file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
