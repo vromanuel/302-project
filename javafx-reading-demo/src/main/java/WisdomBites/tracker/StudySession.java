@@ -1,4 +1,5 @@
 package WisdomBites.tracker;
+<<<<<<< Updated upstream
 import java.time.LocalDate;
 
 public class StudySession {
@@ -28,6 +29,34 @@ public class StudySession {
     }
 
     public LocalDate getSessionDate(){
+=======
+
+import java.time.LocalDate;
+
+public class StudySession {
+    // variables
+    //private int id;
+    private LocalDate sessionDate;
+    private int durationMinutes;
+    private boolean goalCompleted;
+
+    public StudySession(LocalDate sessionDate, int durationMinutes, boolean goalCompleted) {
+        this.sessionDate = sessionDate;
+        this.durationMinutes = durationMinutes;
+        this.goalCompleted = goalCompleted;
+    }
+
+    // Getters and Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public LocalDate getSessionDate() {
+>>>>>>> Stashed changes
         return sessionDate;
     }
 
@@ -50,6 +79,7 @@ public class StudySession {
     public void setGoalCompleted(boolean goalCompleted) {
         this.goalCompleted = goalCompleted;
     }
+<<<<<<< Updated upstream
 
     public String getSubject() {
         return subject;
@@ -67,3 +97,6 @@ public class StudySession {
         this.weekNumber = weekNumber;
     }
 }
+=======
+}
+>>>>>>> Stashed changes
