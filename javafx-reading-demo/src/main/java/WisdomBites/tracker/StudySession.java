@@ -1,49 +1,22 @@
 package WisdomBites.tracker;
-<<<<<<< Updated upstream
+
 import java.time.LocalDate;
 
 public class StudySession {
-    private int id; // database ID
-    private LocalDate sessionDate;
-    private int durationMinutes; // how many minutes studied
-    private boolean goalCompleted; // was daily goal completed?
-    private String subject;
-    private int weekNumber;
+    private int id;                   // database ID
+    private LocalDate sessionDate;     // date of study session
+    private int durationMinutes;       // how many minutes studied
+    private boolean goalCompleted;     // was daily goal completed?
+    private String subject;            // NEW: subject name (e.g., IFB123)
+    private int weekNumber;            // NEW: academic week number (1-8)
 
-    // Constructor
-    public StudySession(LocalDate sessionDate, int durationMinutes, boolean goalCompleted, String subject, int weekNumber){
+    // Constructor (no id)
+    public StudySession(LocalDate sessionDate, int durationMinutes, boolean goalCompleted, String subject, int weekNumber) {
         this.sessionDate = sessionDate;
         this.durationMinutes = durationMinutes;
         this.goalCompleted = goalCompleted;
         this.subject = subject;
         this.weekNumber = weekNumber;
-    }
-
-    // Getters and Setters
-    public int getID(){
-        return id;
-    }
-
-    public void setId(int id){
-        this.id = id;
-    }
-
-    public LocalDate getSessionDate(){
-=======
-
-import java.time.LocalDate;
-
-public class StudySession {
-    // variables
-    //private int id;
-    private LocalDate sessionDate;
-    private int durationMinutes;
-    private boolean goalCompleted;
-
-    public StudySession(LocalDate sessionDate, int durationMinutes, boolean goalCompleted) {
-        this.sessionDate = sessionDate;
-        this.durationMinutes = durationMinutes;
-        this.goalCompleted = goalCompleted;
     }
 
     // Getters and Setters
@@ -56,7 +29,6 @@ public class StudySession {
     }
 
     public LocalDate getSessionDate() {
->>>>>>> Stashed changes
         return sessionDate;
     }
 
@@ -79,7 +51,6 @@ public class StudySession {
     public void setGoalCompleted(boolean goalCompleted) {
         this.goalCompleted = goalCompleted;
     }
-<<<<<<< Updated upstream
 
     public String getSubject() {
         return subject;
@@ -97,6 +68,3 @@ public class StudySession {
         this.weekNumber = weekNumber;
     }
 }
-=======
-}
->>>>>>> Stashed changes
