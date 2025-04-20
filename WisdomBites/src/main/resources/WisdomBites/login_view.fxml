@@ -28,15 +28,49 @@
         </HBox>
 
         <!-- Card area -->
-        <StackPane prefWidth="1000" prefHeight="500"
-                   maxWidth="1000" maxHeight="500"
-                   style="-fx-background-color: #fcd38b; -fx-background-radius: 30; -fx-padding: 40; -fx-border-color: #ffc766; -fx-border-width: 2px; -fx-border-style: solid; -fx-border-radius: 30;">
+        <StackPane prefWidth="1200" prefHeight="600"
+                   maxWidth="1200" maxHeight="600"
+                   style="-fx-background-color: #fcd38b;
+                  -fx-background-radius: 30;
+                  -fx-padding: 60;
+                  -fx-border-color: #ffc766;
+                  -fx-border-width: 2;
+                  -fx-border-style: solid;
+                  -fx-border-radius: 30;">
+
             <!-- LOGIN FORM -->
             <VBox fx:id="loginPane" spacing="20" alignment="CENTER">
-                <Label text="Log In" style="-fx-font-size: 26; -fx-font-weight: bold;"/>
-                <TextField fx:id="loginEmailField" promptText="Email" styleClass="form-input" style="-fx-background-color: #e7b96c;"/>
-                <PasswordField fx:id="loginPasswordField" promptText="Password" styleClass="form-input" style="-fx-background-color: #e7b96c;"/>
-                <Button text="Let’s Go!" onAction="#loginButtonHandle" styleClass="submit-button" style="-fx-background-color: black; -fx-text-color: white;"/>
+
+                <Label text="Log In"
+                       style="-fx-font-size: 26;
+                       -fx-font-weight: bold;"/>
+
+                <TextField fx:id="loginEmailField" promptText="Email" styleClass="form-input"
+                           style="-fx-background-color: #e7b96c;
+                           -fx-text-fill: black;
+                           -fx-prompt-text-fill: white;
+                           -fx-pref-height: 50;
+                           -fx-font-size: 16;"/>
+
+                <PasswordField fx:id="loginPasswordField" promptText="Password" styleClass="form-input"
+                               style="-fx-background-color: #e7b96c;
+                               -fx-text-fill: black;
+                               -fx-prompt-text-fill: white;
+                               -fx-pref-height: 50;
+                               -fx-font-size: 16;"/>
+
+                <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" styleClass="form-input"
+                               style="-fx-background-color: #e7b96c;
+                               -fx-text-fill: black;
+                               -fx-prompt-text-fill: white;
+                               -fx-pref-height: 50;
+                               -fx-font-size: 16;"/>
+
+                <Button text="Let’s Go!" onAction="#loginButtonHandle" styleClass="submit-button"
+                        style="-fx-background-color: black;
+                        -fx-text-fill: white;
+                        -fx-pref-height: 50;
+                        -fx-font-size: 16;"/>
             </VBox>
 
             <!-- REGISTER FORM -->
