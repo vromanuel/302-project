@@ -27,6 +27,7 @@ public class DBConnection {
 
     public static Connection getInstance() {
         // If there is no instance, a new DBConnection is initialised
+//        blah blah blah
         if (instance == null){
             new DBConnection();
         }
