@@ -1,83 +1,84 @@
 package WisdomBites.controller;
 
 import WisdomBites.model.UserDao;
+import WisdomBites.model.User;
 import javafx.fxml.FXML;
-
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import WisdomBites.model.User;
+import javafx.scene.layout.VBox;         // ✅ Correctly placed import
+import javafx.scene.layout.AnchorPane;  // Optional if you're still using AnchorPane elsewhere
+import javafx.scene.shape.Circle;
+import javafx.animation.TranslateTransition;
+import javafx.util.Duration;
+import javafx.scene.layout.StackPane;
+
 
 public class LoginRegisterController {
-    // Controls the login and register views for the application
 
-    // every TextField in each view
     @FXML private TextField emailField;
     @FXML private TextField passWordField;
     @FXML private TextField firstNameField;
     @FXML private TextField lastNameField;
 
+    @FXML private VBox loginPane;
+    @FXML private VBox registerPane;
 
     @FXML
-    public void loginButtonHandle()
-    {
-        // Handles the event where the user presses the login button
-
-        // Inputs: none
-        // Outputs: none
-
-        // retrieve the data from each text field and pass them into the UserDao login function
+    public void loginButtonHandle() {
         String email = emailField.getText();
         String passWord = passWordField.getText();
         User user = UserDao.login(email, passWord);
 
-        // If the UserDao login function returns a non-null user, print the user's firstname and that the login was
-        // successful, or otherwise unsuccessful
-        if(user != null)
-        {
+        if(user != null) {
             System.out.println(user.getFirstName());
             System.out.println("Successful!");
-        }
-        else
-        {
+        } else {
             System.out.println("unsuccessful");
         }
-
-
     }
 
-    public void registerButtonHandle()
-    {
-        // Handles the event where the user presses the register button
-
-        // Inputs: none
-        // Outputs: none
-
-        // get the texts from each TextField and store them in according variables
+    @FXML
+    public void registerButtonHandle() {
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
         String email = emailField.getText();
         String passWord = passWordField.getText();
 
-        // Call the UserDao user registration function to insert the values into the table and returns a boolean value
-        // representing whether insertion was successful
         boolean registrationSuccessful = UserDao.registerUser(firstName, lastName, email, passWord);
 
-        // Print whether the registration was successful or not
-        if(registrationSuccessful)
-        {
+        if(registrationSuccessful) {
             System.out.println("Successful!");
-        }
-        else
-        {
+        } else {
             System.out.println("unsuccessful");
         }
     }
 
-    public void switchToRegister()
-    {
-        // Switches to register view when pressed
+    public void switchToRegister() {
         SceneController.switchScene("register_view.fxml");
-
     }
+
+    //tariq
+
+    @FXML
+    public void initialize() {
+        toggleThumb.setTranslateX(-15); // move left initially
+    }
+
+    @FXML
+    private void flipCard() {
+        isLogin = !isLogin;
+
+        loginPane.setVisible(isLogin);
+        registerPane.setVisible(!isLogin);
+
+        TranslateTransition slide = new TranslateTransition(Duration.millis(200), toggleThumb);
+        slide.setToX(isLogin ? -15 : 15); // slide left or right
+        slide.play();
+    }
+
+    @FXML private StackPane toggleSwitch;
+    @FXML private Circle toggleThumb;
+
+    private boolean isLogin = true;
 
 }
