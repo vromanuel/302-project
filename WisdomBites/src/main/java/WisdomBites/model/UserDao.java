@@ -12,7 +12,7 @@ public class UserDao
     // Connection to the database
     private static Connection connection;
 
-    // Initialise the User Data Access object
+    // Initialise the User Data Access Object
     public UserDao() {
         // Gets the instance of the database connection
         connection = DBConnection.getInstance();

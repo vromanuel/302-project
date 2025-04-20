@@ -15,18 +15,21 @@ import javafx.scene.layout.StackPane;
 
 public class LoginRegisterController {
 
-    @FXML private TextField emailField;
-    @FXML private TextField passWordField;
+    @FXML private TextField loginEmailField;
+    @FXML private TextField loginPassWordField;
     @FXML private TextField firstNameField;
     @FXML private TextField lastNameField;
+
+    @FXML private TextField registerEmailField;
+    @FXML private TextField registerPassWordField;
 
     @FXML private VBox loginPane;
     @FXML private VBox registerPane;
 
     @FXML
     public void loginButtonHandle() {
-        String email = emailField.getText();
-        String passWord = passWordField.getText();
+        String email = loginEmailField.getText();
+        String passWord = loginPassWordField.getText();
         User user = UserDao.login(email, passWord);
 
         if(user != null) {
@@ -41,8 +44,8 @@ public class LoginRegisterController {
     public void registerButtonHandle() {
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
-        String email = emailField.getText();
-        String passWord = passWordField.getText();
+        String email = registerEmailField.getText();
+        String passWord = registerPassWordField.getText();
 
         boolean registrationSuccessful = UserDao.registerUser(firstName, lastName, email, passWord);
 
@@ -53,11 +56,7 @@ public class LoginRegisterController {
         }
     }
 
-    public void switchToRegister() {
-        SceneController.switchScene("register_view.fxml");
-    }
-
-    //tariq
+    //tariq is cool
 
     @FXML
     public void initialize() {

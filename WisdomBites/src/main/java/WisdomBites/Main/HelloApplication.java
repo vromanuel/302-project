@@ -1,6 +1,7 @@
 package WisdomBites.Main;
 
 import WisdomBites.model.DBConnection;
+import WisdomBites.model.TaskDao;
 import WisdomBites.model.UserDao;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -17,6 +18,7 @@ public class HelloApplication extends Application {
 
         // Initialises a UserDao object for the app to access the User table and make changes to it
         UserDao userDao = new UserDao();
+        TaskDao taskDao = new TaskDao();
 
         SceneController.currentStage = stage;
         SceneController.setStage(stage);
