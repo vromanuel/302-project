@@ -87,7 +87,7 @@ public class UserDao
                 String passWord = resultSet.getString(5);
                 User loggedInUser = new User(firstName, lastName, userName, passWord);
                 loggedInUser.setId(id);
-                return user;
+                return loggedInUser;
             }
 
         } catch (Exception e)
