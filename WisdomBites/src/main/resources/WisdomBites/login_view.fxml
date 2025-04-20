@@ -35,7 +35,7 @@
             <VBox fx:id="loginPane" spacing="20" alignment="CENTER">
                 <Label text="Log In" style="-fx-font-size: 26; -fx-font-weight: bold;"/>
                 <TextField fx:id="loginEmailField" promptText="Email" styleClass="form-input" style="-fx-background-color: #e7b96c;"/>
-                <PasswordField fx:id="loginPasswordField" promptText="Password" styleClass="form-input" style="-fx-background-color: #e7b96c;"/>
+                <PasswordField fx:id="loginPassWordField" promptText="Password" styleClass="form-input" style="-fx-background-color: #e7b96c;"/>
                 <Button text="Let’s Go!" onAction="#loginButtonHandle" styleClass="submit-button" style="-fx-background-color: black; -fx-text-color: white;"/>
             </VBox>
 
@@ -48,7 +48,7 @@
                 </HBox>
                 <TextField fx:id="registerEmailField" promptText="Email" styleClass="form-input"/>
                 <TextField promptText="Confirm Email" styleClass="form-input"/>
-                <PasswordField fx:id="registerPasswordField" promptText="Password" styleClass="form-input"/>
+                <PasswordField fx:id="registerPassWordField" promptText="Password" styleClass="form-input"/>
                 <Button text="Let’s Go!" onAction="#registerButtonHandle" styleClass="submit-button"/>
             </VBox>
         </StackPane>
