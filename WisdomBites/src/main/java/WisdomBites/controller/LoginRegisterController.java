@@ -5,8 +5,8 @@ import WisdomBites.model.User;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;         // ✅ Correctly placed import
-import javafx.scene.layout.AnchorPane;  // Optional if you're still using AnchorPane elsewhere
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.animation.TranslateTransition;
 import javafx.util.Duration;
