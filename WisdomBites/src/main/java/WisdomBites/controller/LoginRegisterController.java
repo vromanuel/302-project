@@ -1,5 +1,6 @@
 package WisdomBites.controller;
 
+import WisdomBites.Main.HelloApplication;
 import WisdomBites.model.UserDao;
 import WisdomBites.model.User;
 import javafx.fxml.FXML;
@@ -26,11 +27,13 @@ public class LoginRegisterController {
     @FXML private VBox loginPane;
     @FXML private VBox registerPane;
 
+
     @FXML
     public void loginButtonHandle() {
         String email = loginEmailField.getText();
         String passWord = loginPassWordField.getText();
         User user = UserDao.login(email, passWord);
+
 
         if(user != null) {
             System.out.println(user.getFirstName());

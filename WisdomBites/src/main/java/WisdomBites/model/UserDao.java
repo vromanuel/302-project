@@ -1,5 +1,7 @@
 package WisdomBites.model;
 
+import WisdomBites.Main.HelloApplication;
+
 import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,8 +14,17 @@ public class UserDao
     // Connection to the database
     private static Connection connection;
 
+    public User currentUser;
+
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
+    }
+
+    private HelloApplication app;
+
     // Initialise the User Data Access Object
-    public UserDao() {
+    public UserDao(HelloApplication app) {
+        this.app  = app;
         // Gets the instance of the database connection
         connection = DBConnection.getInstance();
         createUserTable();
@@ -32,8 +43,10 @@ public class UserDao
                     + "passWord VARCHAR NOT NULL"
                     + ")";
 
+
             // Execute the statement with the query
             statement.execute(query);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -91,8 +104,12 @@ public class UserDao
                 User loggedInUser = new User(firstName, lastName, email, passWord);
                 loggedInUser.setId(id);
 
-                if (Objects.equals(passWordSubmitted, passWord))
-                return loggedInUser;
+                if (Objects.equals(passWordSubmitted, passWord)) {
+
+                    return loggedInUser;
+
+
+                }
             }
 
         } catch (Exception e)
