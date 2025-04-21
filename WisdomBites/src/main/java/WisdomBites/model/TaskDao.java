@@ -7,14 +7,17 @@ public class TaskDao {
     // Connection to the database
     private static Connection connection;
 
-    // Initialise the Task Data Access object
+
     public TaskDao() {
+        // Initialise the Task Data Access object
         connection = DBConnection.getInstance();
         createTaskTable();
     }
 
     private void createTaskTable() {
         try {
+            // Creates a table for Tasks with the appropriate attributes
+
             Statement statement = connection.createStatement();
             String query = "CREATE TABLE IF NOT EXISTS task ("
                     +"id INTEGER PRIMARY KEY AUTOINCREMENT,"
