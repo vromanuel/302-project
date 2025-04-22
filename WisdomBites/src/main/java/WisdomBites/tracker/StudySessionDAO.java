@@ -20,7 +20,7 @@ public class StudySessionDAO {
         try {
             Statement statement = connection.createStatement();
 
-            String sql = "CREATE TABLE StudySessions (\n" +
+            String sql = "CREATE TABLE IF NOT EXISTS StudySessions (\n" +
                     "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
                     "    sessionDate TEXT NOT NULL,\n" +
                     "    durationMinutes INTEGER NOT NULL,\n" +

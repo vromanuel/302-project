@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/model/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/model/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/StudySessionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/StudySessionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/testStudySessionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/tracker/testStudySessionDAO.java" afterDir="false" />
-    </list>
+    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +59,7 @@
     "last_opened_file_path": "C:/Users/Manny/Github/302-project-ting/WisdomBites"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.testStudySessionDAO">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="WisdomBites.Main.Main" />
       <module name="javafx-reading-demo" />
@@ -93,8 +88,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testStudySessionDAO" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.testStudySessionDAO" />
       </list>
     </recent_temporary>
   </component>
