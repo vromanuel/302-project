@@ -18,6 +18,8 @@ public class StudySessionDAO {
 
     private void createStudySessionTable() {
         try {
+
+            //Create a statement and an SQL query to create a table on the user's local database for StudySession
             Statement statement = connection.createStatement();
 
             String sql = "CREATE TABLE IF NOT EXISTS StudySessions (\n" +
@@ -39,8 +41,8 @@ public class StudySessionDAO {
 
     // Save a StudySession into the database
     public static boolean saveStudySession(StudySession session) {
+        // Create an SQL query
         String sql = "INSERT INTO StudySessions(sessionDate, durationMinutes, goalCompleted, subject, weekNumber) VALUES(?, ?, ?, ?, ?)";
-
 
 
         try (Connection connection = DBConnection.getInstance();

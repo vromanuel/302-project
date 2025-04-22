@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="" />
+    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../javafx-reading-demo/src/GUI_JOsh/To_do_list.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javafx-reading-demo/src/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javafx-reading-demo/src/main/java/WisdomBites/PersonalisedMessages/PersonalisedMssg.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
