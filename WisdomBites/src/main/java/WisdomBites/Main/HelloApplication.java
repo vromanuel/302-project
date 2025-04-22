@@ -5,6 +5,8 @@ import WisdomBites.model.DBConnection;
 import WisdomBites.model.TaskDao;
 import WisdomBites.model.User;
 import WisdomBites.model.UserDao;
+import WisdomBites.tracker.StudySession;
+import WisdomBites.tracker.StudySessionDAO;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -25,7 +27,7 @@ public class HelloApplication extends Application {
         UserDao userDao = new UserDao(helloApplication);
 
         TaskDao taskDao = new TaskDao();
-
+        StudySessionDAO studySessionDAO = new StudySessionDAO();
         SceneController.currentStage = stage;
         SceneController.setStage(stage);
         SceneController.switchScene("login_view.fxml");

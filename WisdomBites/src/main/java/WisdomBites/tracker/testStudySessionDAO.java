@@ -5,12 +5,16 @@ import java.time.LocalDate;
 public class testStudySessionDAO {
     public static void main(String[] args){
         // create a test study session
+
+        StudySessionDAO studySessionDAO = new StudySessionDAO();
         StudySession testSession = new StudySession(
             LocalDate.now(),
             120,    // studies 120 minutes
             true,                 // goal completed
             "CAB301",             // subject name
             5                    // week number
+
+
         );
 
         // save it into the database

@@ -4,12 +4,44 @@ import WisdomBites.model.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class StudySessionDAO {
+
+    private static Connection connection;
+
+    public StudySessionDAO() {
+        // Initialise the Study session Data Access object
+        connection = DBConnection.getInstance();
+        createStudySessionTable();
+    }
+
+    private void createStudySessionTable() {
+        try {
+            Statement statement = connection.createStatement();
+
+            String sql = "CREATE TABLE StudySessions (\n" +
+                    "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                    "    sessionDate TEXT NOT NULL,\n" +
+                    "    durationMinutes INTEGER NOT NULL,\n" +
+                    "    goalCompleted BOOLEAN NOT NULL,\n" +
+                    "    subject TEXT NOT NULL,\n" +
+                    "    weekNumber INTEGER NOT NULL\n" +
+                    ")";
+            statement.execute(sql);
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();;
+        }
+
+    }
 
     // Save a StudySession into the database
     public static boolean saveStudySession(StudySession session) {
         String sql = "INSERT INTO StudySessions(sessionDate, durationMinutes, goalCompleted, subject, weekNumber) VALUES(?, ?, ?, ?, ?)";
+
+
 
         try (Connection connection = DBConnection.getInstance();
              PreparedStatement statement = connection.prepareStatement(sql)) {

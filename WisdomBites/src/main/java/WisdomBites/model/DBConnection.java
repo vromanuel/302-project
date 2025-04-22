@@ -11,14 +11,12 @@ public class DBConnection {
     // A variable for the connection is created
     private static Connection instance;
 
-    // Initialises the connection to the database
     private DBConnection() {
-        try {
-            // Dynamic project path (so it would work on any computer)
-            String projectDir = System.getProperty("user.dir");
-            String dbPath = projectDir + "/javafx-reading-demo/WisdomBites.db";
-            String url = "jdbc:sqlite:" + dbPath;
+        // initialiser for the database connectioe
 
+        // Gets the connection to the WisdomBites database using the URL
+        String url = "jdbc:sqlite:WisdomBites.db";
+        try {
             instance = DriverManager.getConnection(url);
         } catch(SQLException exception)
         {
