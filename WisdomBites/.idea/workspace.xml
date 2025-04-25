@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/../javafx-reading-demo/src/GUI_JOsh/To_do_list.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../javafx-reading-demo/src/HelloController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../javafx-reading-demo/src/main/java/WisdomBites/PersonalisedMessages/PersonalisedMssg.java" beforeDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/Closecookieview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/Fortuneapp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/closecookieview.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/close.cookie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/open.cookie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/302-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/302-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WisdomBites.db" beforeDir="false" afterPath="$PROJECT_DIR$/WisdomBites.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javafx-reading-demo/src/GUI_josh/todolist.java" beforeDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -58,11 +71,19 @@
     "Application.testStudySessionDAO.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "FrontEnd__JOSh",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Manny/Github/302-project-ting/WisdomBites"
+    "last_opened_file_path": "C:/Users/Manny/Github/302-project-ting/WisdomBites",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="WisdomBites.Main.Main" />
