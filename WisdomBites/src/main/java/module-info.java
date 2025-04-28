@@ -6,6 +6,7 @@ module com.example.javafxreadingdemo {
     requires java.desktop;
 
 
+
     opens WisdomBites to javafx.fxml;
     exports WisdomBites;
     exports WisdomBites.controller;

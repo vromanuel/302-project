@@ -37,6 +37,7 @@ public class LoginRegisterController {
     @FXML private VBox registerPane;
 
     @FXML private Label registerStatusLabel;
+    @FXML private Label loginStatusLabel;
 
 
     @FXML
@@ -44,16 +45,26 @@ public class LoginRegisterController {
         String email = loginEmailField.getText();
         String passWord = loginPassWordField.getText();
 
+        if (email.isEmpty() || passWord.isEmpty())
+        {
+            loginStatusLabel.setText("Registration unsuccessful! Fields must not be left blank");
+            loginStatusLabel.setTextFill(Color.RED);
+            return;
+        }
+
         User user = UserDao.login(email, passWord);
         StateController.setCurrentUser(user);
 
+
         if(user != null) {
-            System.out.println(user.getFirstName());
-            System.out.println("Successful!");
+            loginStatusLabel.setText("Registration successful! you have logged in!");
+            loginStatusLabel.setTextFill(Color.GREEN);
             SceneController.switchSceneWithDelay("home_page.fxml", 3);
 
         } else {
-            System.out.println("unsuccessful");
+            loginStatusLabel.setText("Registration unsuccessful! Your credentials do not match our systen!");
+            loginStatusLabel.setTextFill(Color.RED);
+           
         }
     }
 
