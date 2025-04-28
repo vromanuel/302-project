@@ -81,8 +81,12 @@
                     <TextField fx:id="lastNameField" promptText="Last Name" styleClass="form-input"/>
                 </HBox>
                 <TextField fx:id="registerEmailField" promptText="Email" styleClass="form-input"/>
-                <TextField promptText="Confirm Email" styleClass="form-input"/>
+                <TextField fx:id="confirmEmailField" promptText="Confirm Email" styleClass="form-input"/>
                 <PasswordField fx:id="registerPassWordField" promptText="Password" styleClass="form-input"/>
+
+                <Label fx:id="registerStatusLabel" style = "-fx-text-fill: red; -fx-font-size: 14;" />
+
+
                 <Button text="Let’s Go!" onAction="#registerButtonHandle" styleClass="submit-button"/>
             </VBox>
         </StackPane>
