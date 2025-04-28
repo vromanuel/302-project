@@ -93,7 +93,7 @@ public class LoginRegisterController {
             registerPassWordField.clear();
             confirmEmailField.clear();
 
-            SceneController.switchSceneWithDelay("login_view.fxml", 2);
+            SceneController.switchSceneWithDelay("login_view.fxml", 5);
 
         } else {
             registerStatusLabel.setText("Registration failed. Email may already exist");
