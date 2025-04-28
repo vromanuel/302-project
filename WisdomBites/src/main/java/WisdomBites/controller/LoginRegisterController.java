@@ -50,7 +50,8 @@ public class LoginRegisterController {
         if(user != null) {
             System.out.println(user.getFirstName());
             System.out.println("Successful!");
-            SceneController.switchSceneWithDelay("closecookieview.fxml", 3);
+            SceneController.switchSceneWithDelay("home_page.fxml", 3);
+
         } else {
             System.out.println("unsuccessful");
         }
