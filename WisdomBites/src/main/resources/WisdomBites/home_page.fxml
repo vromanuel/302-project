@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="WisdomBites.controller.HomePageController"
+           prefWidth="1600" prefHeight="900"
+           style="-fx-background-color: #f5e1c0;">
+
+    <VBox spacing="30" alignment="CENTER" StackPane.alignment="CENTER">
+
+        <!-- Top buttons -->
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="quotesButton" text="Quotes"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
+            <Button fx:id="predictionsButton" text="Predictions"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
+            <Button fx:id="todoButton" text="To-Do-List"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
+        </HBox>
+
+        <!-- Fortune cookie image -->
+        <ImageView fx:id="cookieImage" fitWidth="300" preserveRatio="true" />
+
+        <!-- Get Your Fortune Button -->
+        <Button fx:id="fortuneButton" text="Get your fortune"
+                style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 20px;" />
+
+        <!-- Bottom buttons -->
+        <HBox spacing="30" alignment="CENTER">
+            <Button fx:id="progressButton" text="My Progress"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
+            <Button fx:id="challengesButton" text="Daily Challenges"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
+        </HBox>
+
+    </VBox>
+</StackPane>
