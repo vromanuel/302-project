@@ -14,4 +14,5 @@ module com.example.javafxreadingdemo {
     opens WisdomBites.Main to javafx.fxml;
     exports WisdomBites.model;
     opens WisdomBites.model to javafx.fxml;
+
 }
