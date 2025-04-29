@@ -1,4 +1,4 @@
-package Fortune_cookie_pages; //
+package WisdomBites.controller; //
 
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;

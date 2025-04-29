@@ -3,79 +3,85 @@ package Fortune_cookie_pages;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
 public class Closecookieview {
-    private VBox root;
-    private HBox header;
+    private StackPane root;
+    private VBox mainVBox;
+    private StackPane cardPane;
+    private VBox cardContent;
     private ImageView cookieImage;
     private Button openBtn;
-    private Button backButton;
-    private Label titleLabel;
+
+    private boolean isCookieOpened = false; // 쿠키가 열렸는지 체크
 
     public Closecookieview() {
-        root = new VBox(20);
-        root.setAlignment(Pos.TOP_CENTER);
-        root.setStyle("-fx-background-color: #F5E8C7;");
+        root = new StackPane();
+        root.setPrefSize(1600, 900);
+        root.setStyle("-fx-background-color: #f5e1c0;");
 
-        // ------ 상단바 (Header) ------
-        header = new HBox();
-        header.setAlignment(Pos.CENTER_LEFT);
-        header.setPadding(new Insets(10));
-        header.setSpacing(10);
-        header.setStyle("-fx-background-color: #E2B165; -fx-background-radius: 0 0 20 20;");
+        mainVBox = new VBox(30);
+        mainVBox.setAlignment(Pos.TOP_CENTER);
+        mainVBox.setPadding(new Insets(30));
 
-        // 뒤로가기 버튼
-        backButton = new Button("←");
-        backButton.setStyle(
-                "-fx-background-color: transparent;" +
-                        "-fx-font-size: 18px;" +
-                        "-fx-text-fill: black;"
+        cardPane = new StackPane();
+        cardPane.setPrefSize(1000, 500);
+        cardPane.setMaxSize(1000, 500);
+        cardPane.setStyle(
+                "-fx-background-color: #fcd38b;" +
+                        "-fx-background-radius: 30;" +
+                        "-fx-padding: 60;" +
+                        "-fx-border-color: #ffc766;" +
+                        "-fx-border-width: 2;" +
+                        "-fx-border-style: solid;" +
+                        "-fx-border-radius: 30;"
         );
 
-        // 타이틀 (중앙 정렬을 위해 HBox를 가운데로도 맞춰야 함)
-        titleLabel = new Label("Fortune");
-        titleLabel.setStyle(
-                "-fx-font-size: 20px;" +
-                        "-fx-font-weight: bold;" +
-                        "-fx-text-fill: black;"
-        );
-        HBox.setHgrow(titleLabel, Priority.ALWAYS);
-        titleLabel.setMaxWidth(Double.MAX_VALUE);
-        titleLabel.setAlignment(Pos.CENTER);
+        cardContent = new VBox(20);
+        cardContent.setAlignment(Pos.CENTER);
 
-        header.getChildren().addAll(backButton, titleLabel);
-
-        // ------ 메인 콘텐츠 ------
+        // 처음에는 닫힌 쿠키 이미지 (쿠키2.jpg)
         cookieImage = new ImageView(new Image("file:resources/close.cookie.png"));
-        cookieImage.setFitWidth(200);
+        cookieImage.setFitWidth(300);
         cookieImage.setPreserveRatio(true);
 
         openBtn = new Button("Open Another");
         openBtn.setStyle(
-                "-fx-background-color: #D19E5A;" +
-                        "-fx-text-fill: black;" +
-                        "-fx-font-size: 14px;" +
+                "-fx-background-color: black;" +
+                        "-fx-text-fill: white;" +
+                        "-fx-pref-height: 50;" +
+                        "-fx-font-size: 16;" +
                         "-fx-background-radius: 20;" +
-                        "-fx-padding: 5 20 5 20;"
+                        "-fx-padding: 10 30 10 30;"
         );
 
-        // 버튼 클릭 액션 (TODO)
-        openBtn.setOnAction(e -> System.out.println("TODO: Switch to open cookie page"));
+        // 버튼 클릭 시 이미지 변경
+        openBtn.setOnAction(e -> {
+            if (!isCookieOpened) {
+                cookieImage.setImage(new Image("file:resources/open.cookie.png")); // 열린 쿠키 이미지로 변경
+                isCookieOpened = true;
+                openBtn.setText("Get Another Fortune"); // 버튼 텍스트도 바꿀 수 있음
+            } else {
+                // 나중에는 여기에 "새로운 쿠키 생성" 로직을 추가할 수도 있어
+                System.out.println("새로운 포춘 쿠키 준비 중...");
+            }
+        });
 
-        // 최종 root에 상단바 + 이미지 + 버튼 추가
-        root.getChildren().addAll(header, cookieImage, openBtn);
+        cardContent.getChildren().addAll(cookieImage, openBtn);
+        cardPane.getChildren().add(cardContent);
+
+        mainVBox.getChildren().addAll(cardPane);
+
+        root.getChildren().add(mainVBox);
     }
 
-    public VBox getRoot() {
+    public StackPane getRoot() {
         return root;
-
     }
 
-    public Button getBackButton() {
-        return backButton;
+    public Button getOpenButton() {
+        return openBtn;
     }
 }
