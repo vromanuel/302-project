@@ -30,7 +30,11 @@ public class Task {
     public String getTitle() { return title; }
     public void setTitle(String title) {this.title = title;}
 
-    public String description() {return }
+    public String description() {return description;}
+    public void setDescription(String title) {this.description = description; }
+
+
+
 }
 
 
