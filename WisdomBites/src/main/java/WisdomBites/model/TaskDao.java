@@ -22,7 +22,7 @@ public class TaskDao {
             String query = "CREATE TABLE IF NOT EXISTS task ("
                     +"id INTEGER PRIMARY KEY AUTOINCREMENT,"
                     +"createdBy INTEGER,"
-                    +"dateCreated INTEGER NOT NULL,"
+                    +"dateCreated TEXT NOT NULL,"
                     +"title TEXT NOT NULL,"
                     +"description TEXT NOT NULL,"
                     +"completed TEXT CHECK (completed IN ('T', 'F')),"
@@ -36,8 +36,18 @@ public class TaskDao {
         }
     }
 
-    public boolean createTask()
+    public boolean addTask()
     {
+        try
+        {
+            Statement statement = connection.createStatement();
+            String query = "INSERT INTO task (createdBy, dateCreated, title, description, completed) VALUES (?,?,?,?,?)";
+
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
     }
 
