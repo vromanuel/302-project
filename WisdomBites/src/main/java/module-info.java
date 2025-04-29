@@ -16,4 +16,6 @@ module com.example.javafxreadingdemo {
     exports WisdomBites.model;
     opens WisdomBites.model to javafx.fxml;
 
+    exports Fortune_cookie_pages;
+    opens Fortune_cookie_pages to javafx.fxml;
 }

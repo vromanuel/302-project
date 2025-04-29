@@ -24,7 +24,7 @@ public class Fortuneapp extends Application {
         });
 
         // Scene 생성 (배경색 지정)
-        Scene scene = new Scene(closeView.getRoot(), 540, 960, Color.web("#F5E8C7"));
+        Scene scene = new Scene(closeView.getRoot(), 1400, 600, Color.web("#F5E8C7"));
 
         primaryStage.setTitle("Fortune Cookie");
         primaryStage.setScene(scene);
