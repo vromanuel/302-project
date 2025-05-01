@@ -27,9 +27,16 @@ public class HomePageController {
     public void initialize() {
         cookieImage.setImage(new Image(getClass().getResource("/close.cookie.png").toExternalForm()));
         welcomeLabel.setText(String.format("Welcome, %s!", StateController.currentUser.getFirstName()));
+
         fortuneButton.setOnAction(e -> {
             System.out.println("Get your fortune clicked!");
         });
+
+        predictionsButton.setOnAction(e -> {
+            SceneController.switchScene("personalised_msg.fxml");
+        });
+
         logOutButton.setOnAction(e -> logout());
     }
+
 }
