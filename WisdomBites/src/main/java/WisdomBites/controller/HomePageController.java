@@ -15,6 +15,14 @@ public class HomePageController {
     @FXML
     private Button quotesButton, predictionsButton, todoButton, fortuneButton, progressButton, challengesButton;
 
+    @FXML private Button logOutButton;
+
+    public static void logout()
+    {
+        StateController.currentUser= null;
+        SceneController.switchSceneWithDelay("login_view.fxml", 3);
+    }
+
     @FXML
     public void initialize() {
         cookieImage.setImage(new Image(getClass().getResource("/close.cookie.png").toExternalForm()));
@@ -22,5 +30,6 @@ public class HomePageController {
         fortuneButton.setOnAction(e -> {
             System.out.println("Get your fortune clicked!");
         });
+        logOutButton.setOnAction(e -> logout());
     }
 }

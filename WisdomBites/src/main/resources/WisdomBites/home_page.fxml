@@ -41,7 +41,10 @@
                     style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
             <Button fx:id="challengesButton" text="Daily Challenges"
                     style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
+            <Button fx:id="logOutButton" text="log out!"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
         </HBox>
+
 
     </VBox>
 </StackPane>
