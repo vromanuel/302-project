@@ -1,7 +1,11 @@
 package WisdomBites.model;
 
+import WisdomBites.controller.StateController;
+
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.time.LocalDate;
 
 public class TaskDao {
     // Connection to the database
@@ -36,20 +40,36 @@ public class TaskDao {
         }
     }
 
-    public boolean addTask()
+    public static boolean addTask(String title, String description, String completed)
     {
         try
         {
-            Statement statement = connection.createStatement();
+
             String query = "INSERT INTO task (createdBy, dateCreated, title, description, completed) VALUES (?,?,?,?,?)";
+
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            statement.setInt(1, StateController.currentUser.getId());
+
+            String date = LocalDate.now().toString();
+            statement.setString(2, date);
+
+            statement.setString(3, title);
+
+            statement.setString(4, description);
+
+            statement.setString(5, "F");
+
+            statement.executeUpdate();
 
 
         } catch (Exception e)
         {
-            e.printStackTrace();
+            return false;
         }
-        return false;
+        return true;
     }
+
 
 
 }

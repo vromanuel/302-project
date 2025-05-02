@@ -52,6 +52,8 @@ public class LoginRegisterController {
             return;
         }
 
+
+
         User user = UserDao.login(email, passWord);
         StateController.setCurrentUser(user);
 
@@ -66,6 +68,8 @@ public class LoginRegisterController {
             loginStatusLabel.setTextFill(Color.RED);
            
         }
+
+
     }
 
     @FXML
@@ -80,6 +84,20 @@ public class LoginRegisterController {
         if (!email.equals(confirmEmail))
         {
             registerStatusLabel.setText("Emails do not match!!");
+            registerStatusLabel.setTextFill(Color.RED);
+            return;
+        }
+
+        if (email.length() <= 8)
+        {
+            registerStatusLabel.setText("email too short!");
+            registerStatusLabel.setTextFill(Color.RED);
+            return;
+        }
+
+        if (passWord.length() <=8)
+        {
+            registerStatusLabel.setText("password must be more than 8 characters!");
             registerStatusLabel.setTextFill(Color.RED);
             return;
         }
