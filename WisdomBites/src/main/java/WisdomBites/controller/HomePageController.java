@@ -20,7 +20,7 @@ public class HomePageController {
     public static void logout()
     {
         StateController.currentUser= null;
-        SceneController.switchSceneWithDelay("login_view.fxml", 3);
+        SceneController.switchScene("login_view.fxml");
     }
 
     @FXML
@@ -37,6 +37,8 @@ public class HomePageController {
         });
 
         logOutButton.setOnAction(e -> logout());
+
+        todoButton.setOnAction((e -> SceneController.switchScene("create_task.fxml")));
     }
 
 }

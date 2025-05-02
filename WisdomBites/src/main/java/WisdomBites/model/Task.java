@@ -7,9 +7,9 @@ public class Task {
     private String dateCreated;
     private String title;
     private String description;
-    private boolean completed;
+    private String completed;
 
-    public Task(int createdBy, String dateCreated, String title, String description, boolean completed)
+    public Task(int createdBy, String dateCreated, String title, String description, String completed)
     {
         this.createdBy = createdBy;
         this.dateCreated = dateCreated;
@@ -30,9 +30,11 @@ public class Task {
     public String getTitle() { return title; }
     public void setTitle(String title) {this.title = title;}
 
-    public String description() {return description;}
+    public String getDescription() {return description;}
     public void setDescription(String title) {this.description = description; }
 
+    public String getCompleted() { return completed;}
+    public void setCompleted() {this.completed = "T";}
 
 
 }

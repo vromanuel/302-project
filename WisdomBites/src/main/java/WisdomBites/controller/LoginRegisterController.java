@@ -61,7 +61,7 @@ public class LoginRegisterController {
         if(user != null) {
             loginStatusLabel.setText("Registration successful! you have logged in!");
             loginStatusLabel.setTextFill(Color.GREEN);
-            SceneController.switchSceneWithDelay("home_page.fxml", 3);
+            SceneController.switchScene("home_page.fxml");
 
         } else {
             loginStatusLabel.setText("Registration unsuccessful! Your credentials do not match our systen!");
@@ -123,7 +123,7 @@ public class LoginRegisterController {
             registerPassWordField.clear();
             confirmEmailField.clear();
 
-            SceneController.switchSceneWithDelay("login_view.fxml", 5);
+            SceneController.switchScene("login_view.fxml");
 
         } else {
             registerStatusLabel.setText("Registration failed. Email may already exist");

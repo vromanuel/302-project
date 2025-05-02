@@ -4,8 +4,11 @@ import WisdomBites.controller.StateController;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TaskDao {
     // Connection to the database
@@ -70,6 +73,62 @@ public class TaskDao {
         return true;
     }
 
+    public static List<Task> getTasksByUser(int userID)
+    {
+        try
+        {
+            String query = "SELECT * FROM task WHERE createdBy = ? AND completed = ?";
 
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            statement.setInt(1, userID);
+            statement.setString(2, "F");
+
+            ResultSet resultSet = statement.executeQuery();
+
+            List<Task> toDoTasks = new ArrayList<Task>();
+
+
+            while(resultSet.next())
+            {
+                int id = resultSet.getInt(1);
+                int createdBy = resultSet.getInt(2);
+                String dateCreated = resultSet.getString(3);
+                String title = resultSet.getString(4);
+                String description = resultSet.getString(5);
+                String completed = resultSet.getString(6);
+                Task task = new Task(createdBy, dateCreated, title, description, completed);
+                task.setId(id);
+                toDoTasks.add(task);
+            }
+            return toDoTasks;
+
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return  null;
+    }
+
+    public static void completeTask(int id)
+    {
+        try
+        {
+            String query = "UPDATE task SET completed = ? WHERE id = ?";
+
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            statement.setString(1, "T");
+            statement.setInt(2, id);
+
+            statement.executeUpdate();
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 
 }
