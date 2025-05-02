@@ -1,8 +1,9 @@
-package main.java.WisdomBites.PersonalisedMessages;
+package WisdomBites.controller;
+
 
 import java.time.LocalTime;
 
-public class PersonalisedMssg {
+public class PMsgController {
 
     public static String generateWelcomeMessage(String name, String subject, int streakDays) {
         String greeting = getGreeting();

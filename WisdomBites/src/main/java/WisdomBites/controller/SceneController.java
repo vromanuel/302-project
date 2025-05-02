@@ -1,9 +1,11 @@
 package WisdomBites.controller;
 
+import javafx.animation.PauseTransition;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -13,6 +15,13 @@ public class SceneController {
 
     public static void setStage(Stage stage) {
         currentStage = stage;
+    }
+
+    public static void switchSceneWithDelay(String fileName, int delayTime)
+    {
+        PauseTransition delay = new PauseTransition(Duration.seconds(delayTime));
+        delay.setOnFinished(event -> switchScene(fileName));
+        delay.play();
     }
 
     public static void switchScene(String fileName) {
@@ -28,4 +37,6 @@ public class SceneController {
             e.printStackTrace();
         }
     }
+
+
 }
