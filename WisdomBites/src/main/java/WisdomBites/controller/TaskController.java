@@ -5,13 +5,11 @@ import WisdomBites.model.TaskDao;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -50,50 +48,53 @@ public class TaskController {
         taskListContainer.getChildren().clear();
         List<Task> tasks = TaskDao.getTasksByUser(StateController.currentUser.getId());
 
-        assert tasks != null;
         for (Task task : tasks) {
-            // Container for one task (title + buttons + expandable description)
             VBox taskBox = new VBox(5);
-            taskBox.setStyle("-fx-background-color: #fff3e0; -fx-padding: 10; -fx-background-radius: 10;");
+            taskBox.setStyle("-fx-background-color: #fbe9e7; -fx-padding: 10; -fx-background-radius: 8;");
+            taskBox.setCursor(Cursor.HAND);
 
-            // Top row: title and buttons
             HBox topRow = new HBox(10);
             topRow.setAlignment(Pos.CENTER_LEFT);
 
+            CheckBox checkBox = new CheckBox();
+            checkBox.setStyle("-fx-border-color: black; -fx-border-width: 2; -fx-background-color: white;");
+
+
             Label titleLabel = new Label(task.getTitle());
-            titleLabel.setStyle("-fx-font-size: 16px; -fx-text-fill: #5a3921;");
+            titleLabel.setStyle("-fx-font-size: 16px; -fx-text-fill: #3e2723;");
 
-            Button expandBtn = new Button("▼"); // Down arrow
-            Button completeBtn = new Button("Complete");
-            Button deleteBtn = new Button("Delete");
+            topRow.getChildren().addAll(checkBox, titleLabel);
 
-            Label dateCreatedLabel = new Label(task.getDateCreated());
-            dateCreatedLabel.setAlignment(Pos.CENTER_RIGHT);
-
-            topRow.getChildren().addAll(titleLabel, expandBtn, completeBtn, deleteBtn, dateCreatedLabel);
-
-            // Description label (initially hidden)
+            // Description and dateCreated, initially hidden
             Label descLabel = new Label(task.getDescription());
-            descLabel.setStyle("-fx-font-size: 12px; -fx-text-fill: #7b5e3e;");
+            descLabel.setStyle("-fx-font-size: 13px; -fx-text-fill: #5d4037;");
             descLabel.setWrapText(true);
             descLabel.setVisible(false);
-            descLabel.setManaged(false); // Prevent it from occupying space when hidden
+            descLabel.setManaged(false);
 
-            // Toggle description on expandBtn click
-            expandBtn.setOnAction(e -> {
+            Label dateCreatedLabel = new Label("Created: " + task.getDateCreated());
+            dateCreatedLabel.setStyle("-fx-font-size: 11px; -fx-text-fill: #795548;");
+            dateCreatedLabel.setVisible(false);
+            dateCreatedLabel.setManaged(false);
+
+            // Whole box click toggles both
+            taskBox.setOnMouseClicked(e -> {
                 boolean showing = descLabel.isVisible();
                 descLabel.setVisible(!showing);
                 descLabel.setManaged(!showing);
-                expandBtn.setText(showing ? "▼" : "▲");
+                dateCreatedLabel.setVisible(!showing);
+                dateCreatedLabel.setManaged(!showing);
             });
 
-            completeBtn.setOnAction(e -> {
-                TaskDao.completeTask(task.getId());
-
-                loadTasks();
+            // Checkbox triggers completion
+            checkBox.setOnAction(e -> {
+                if (checkBox.isSelected()) {
+                    TaskDao.completeTask(task.getId());
+                    loadTasks();
+                }
             });
 
-            taskBox.getChildren().addAll(topRow, descLabel);
+            taskBox.getChildren().addAll(topRow, descLabel, dateCreatedLabel);
             taskListContainer.getChildren().add(taskBox);
         }
     }
