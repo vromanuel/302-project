@@ -42,8 +42,10 @@ public class Closecookieview {
         cardContent = new VBox(20);
         cardContent.setAlignment(Pos.CENTER);
 
-        // 처음에는 닫힌 쿠키 이미지 (쿠키2.jpg)
+
         cookieImage = new ImageView(new Image("file:resources/close.cookie.png"));
+
+
         cookieImage.setFitWidth(300);
         cookieImage.setPreserveRatio(true);
 
@@ -64,7 +66,7 @@ public class Closecookieview {
                 isCookieOpened = true;
                 openBtn.setText("Get Another Fortune"); // 버튼 텍스트도 바꿀 수 있음
             } else {
-                // 나중에는 여기에 "새로운 쿠키 생성" 로직을 추가할 수도 있어
+
                 System.out.println("새로운 포춘 쿠키 준비 중...");
             }
         });

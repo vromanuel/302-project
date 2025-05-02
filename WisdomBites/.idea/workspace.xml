@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/closecookieview.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/studytrackerapp/studytracker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/studytrackerapp/studytrackercontroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/studytracker.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/CloseCookieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/CloseCookieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/Closecookieview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/Closecookieview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/Fortuneapp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/Fortuneapp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fortune_cookie_pages/closecookieview.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +60,8 @@
     "Application.Fortuneapp.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.study_tracker.executor": "Run",
+    "Application.studytracker.executor": "Run",
     "Application.testStudySessionDAO.executor": "Run",
     "JUnit.Fortune_cookie_pages in javafx-reading-demo.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -80,7 +81,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.studytracker">
     <configuration name="Fortuneapp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Fortune_cookie_pages.Fortuneapp" />
       <module name="javafx-reading-demo" />
@@ -107,12 +108,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testStudySessionDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WisdomBites.tracker.testStudySessionDAO" />
+    <configuration name="study_tracker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study_tracker.study_tracker" />
       <module name="javafx-reading-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="WisdomBites.tracker.*" />
+          <option name="PATTERN" value="studytrackerapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="studytracker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="studytrackerapp.studytracker" />
+      <module name="javafx-reading-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="studytrackerapp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,10 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.studytracker" />
+        <item itemvalue="Application.study_tracker" />
         <item itemvalue="Application.Fortuneapp" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Fortune_cookie_pages in javafx-reading-demo" />
-        <item itemvalue="Application.testStudySessionDAO" />
       </list>
     </recent_temporary>
   </component>
