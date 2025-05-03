@@ -12,7 +12,7 @@ public class DBConnection {
     private static Connection instance;
 
     private DBConnection() {
-        // initialiser for the database connectioe
+        // initialiser for the database connection
 
         // Gets the connection to the WisdomBites database using the URL
         String url = "jdbc:sqlite:WisdomBites.db";
