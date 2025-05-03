@@ -6,6 +6,7 @@ module com.example.javafxreadingdemo {
     requires java.desktop;
 
 
+
     opens WisdomBites to javafx.fxml;
     exports WisdomBites;
     exports WisdomBites.controller;
@@ -14,4 +15,7 @@ module com.example.javafxreadingdemo {
     opens WisdomBites.Main to javafx.fxml;
     exports WisdomBites.model;
     opens WisdomBites.model to javafx.fxml;
+
+    exports Fortune_cookie_pages;
+    opens Fortune_cookie_pages to javafx.fxml;
 }
