@@ -26,6 +26,10 @@
                     style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 16px;" />
         </VBox>
 
+        <Button fx:id="backButton" text="← Back to Home"
+                style="-fx-font-size: 14; -fx-background-color: #fdd28e; -fx-text-fill: black; -fx-padding: 5 15; -fx-background-radius: 20;" />
+
+
         <!-- Task List -->
         <ScrollPane fitToWidth="true" style="-fx-background: transparent;">
             <VBox fx:id="taskListContainer" spacing="15" alignment="TOP_CENTER" style="-fx-padding: 10;" />
