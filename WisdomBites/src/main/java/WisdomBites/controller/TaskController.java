@@ -24,11 +24,17 @@ public class TaskController {
     private VBox taskListContainer;
     @FXML private TextField titleField;
     @FXML private TextArea descriptionField;
-
     @FXML private Button addTaskButton;
+    @FXML private Button backButton;
+
     @FXML
     public void initialize() {
         loadTasks();
+
+        // Setup back button action
+        backButton.setOnAction(e -> {
+            SceneController.switchScene("home_page.fxml");
+        });
     }
 
     @FXML
