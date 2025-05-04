@@ -145,6 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Fortuneapp" />
+      <item itemvalue="Application.study_tracker" />
+      <item itemvalue="Application.studytracker" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.Fortune_cookie_pages in javafx-reading-demo" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Fortuneapp" />
