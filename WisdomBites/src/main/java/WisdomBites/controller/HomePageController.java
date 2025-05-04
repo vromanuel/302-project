@@ -39,6 +39,8 @@ public class HomePageController {
         logOutButton.setOnAction(e -> logout());
 
         todoButton.setOnAction((e -> SceneController.switchScene("create_task.fxml")));
+
+        progressButton.setOnAction((e -> SceneController.switchScene("studytracker.fxml")));
     }
 
 }
