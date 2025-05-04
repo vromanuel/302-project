@@ -42,19 +42,6 @@ Basic **unit tests** are included for database interactions and task logic. Test
 
 ---
 
-## Folder Structure
-
-src/
-├── controller/
-├── model/
-├── Main/
-├── resources/
-│   ├── *.fxml
-│   └── assets/
-└── test/
-
----
-
 ## Getting Started
 
 ### Prerequisites
