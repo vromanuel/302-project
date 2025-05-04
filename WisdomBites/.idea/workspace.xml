@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WisdomBites.db" beforeDir="false" afterPath="$PROJECT_DIR$/WisdomBites.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/HomePageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,9 +145,9 @@
     </configuration>
     <list>
       <item itemvalue="Application.Fortuneapp" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.study_tracker" />
       <item itemvalue="Application.studytracker" />
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.Fortune_cookie_pages in javafx-reading-demo" />
     </list>
     <recent_temporary>
@@ -175,5 +173,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WisdomBites/model/TaskDao.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WisdomBites/model/TaskDao.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
