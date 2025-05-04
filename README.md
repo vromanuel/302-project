@@ -51,3 +51,16 @@ Basic **unit tests** are included for database interactions and task logic. Test
 ### Run the App
 ```bash
 mvn javafx:run
+
+---
+
+## Folder Structure
+
+src/
+├── controller/
+├── model/
+├── Main/
+├── resources/
+│   ├── *.fxml
+│   └── assets/
+└── test/
