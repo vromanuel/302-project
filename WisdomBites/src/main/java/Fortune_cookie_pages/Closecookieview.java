@@ -15,7 +15,7 @@ public class Closecookieview {
     private ImageView cookieImage;
     private Button openBtn;
 
-    private boolean isCookieOpened = false; // 쿠키가 열렸는지 체크
+    private boolean isCookieOpened = false; // checking the cookie is open or not
 
     public Closecookieview() {
         root = new StackPane();
@@ -62,12 +62,11 @@ public class Closecookieview {
         // 버튼 클릭 시 이미지 변경
         openBtn.setOnAction(e -> {
             if (!isCookieOpened) {
-                cookieImage.setImage(new Image("file:resources/open.cookie.png")); // 열린 쿠키 이미지로 변경
-                isCookieOpened = true;
-                openBtn.setText("Get Another Fortune"); // 버튼 텍스트도 바꿀 수 있음
+                cookieImage.setImage(new Image("file:resources/open.cookie.png")); // changing cookie image and showing the results
+                openBtn.setText("Get Another Fortune");
             } else {
 
-                System.out.println("새로운 포춘 쿠키 준비 중...");
+                System.out.println("Preparing new coookies");
             }
         });
 

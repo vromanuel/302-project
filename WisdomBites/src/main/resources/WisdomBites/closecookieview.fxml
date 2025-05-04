@@ -27,7 +27,7 @@
                           -fx-text-fill: black;"/>
         </HBox>
 
-        <!-- 메인 콘텐츠 -->
+        <!--main contents -->
         <ImageView fx:id="cookieImage" fitWidth="300" preserveRatio="true" />
 
         <!-- Open Another 버튼 -->

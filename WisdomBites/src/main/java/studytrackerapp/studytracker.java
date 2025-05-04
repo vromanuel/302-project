@@ -15,7 +15,7 @@ public class studytracker extends Application {
                 getClass().getResource("/WisdomBites/studytracker.fxml")
         ));
         primaryStage.setTitle("Study Tracker");
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 1600, 900));
         primaryStage.show();
     }
 
