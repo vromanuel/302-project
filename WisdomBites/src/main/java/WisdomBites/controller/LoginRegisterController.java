@@ -64,7 +64,7 @@ public class LoginRegisterController {
             SceneController.switchScene("home_page.fxml");
 
         } else {
-            loginStatusLabel.setText("Registration unsuccessful! Your credentials do not match our systen!");
+            loginStatusLabel.setText("Registration unsuccessful! Your credentials do not match our system!");
             loginStatusLabel.setTextFill(Color.RED);
            
         }
@@ -90,14 +90,14 @@ public class LoginRegisterController {
 
         if (email.length() <= 8)
         {
-            registerStatusLabel.setText("email too short!");
+            registerStatusLabel.setText("Email too short!");
             registerStatusLabel.setTextFill(Color.RED);
             return;
         }
 
         if (passWord.length() <=8)
         {
-            registerStatusLabel.setText("password must be more than 8 characters!");
+            registerStatusLabel.setText("Password must be more than 8 characters!");
             registerStatusLabel.setTextFill(Color.RED);
             return;
         }
