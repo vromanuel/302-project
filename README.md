@@ -42,6 +42,12 @@ Basic **unit tests** are included for database interactions and task logic. Test
 
 ---
 
+## Folder Structure
+
+<pre lang="markdown"> ``` src/ ├── controller/ │ └── LoginRegisterController.java │ └── TaskController.java ├── model/ │ └── User.java │ └── TaskDao.java ├── Main/ │ └── HelloApplication.java │ └── Main.java ├── resources/ │ ├── WisdomBites/ │ │ ├── login_view.fxml │ │ ├── create_task.fxml │ │ └── SplashScreen.fxml │ └── logo.png └── test/ └── UserDaoTest.java └── TaskDaoTest.java ``` </pre>
+
+---
+
 ## Getting Started
 
 ### Prerequisites
@@ -51,16 +57,3 @@ Basic **unit tests** are included for database interactions and task logic. Test
 ### Run the App
 ```bash
 mvn javafx:run
-
----
-
-## Folder Structure
-
-src/
-├── controller/
-├── model/
-├── Main/
-├── resources/
-│   ├── *.fxml
-│   └── assets/
-└── test/
