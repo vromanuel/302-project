@@ -6,7 +6,6 @@ module com.example.javafxreadingdemo {
     requires java.desktop;
 
 
-
     opens WisdomBites to javafx.fxml;
     exports WisdomBites;
     exports WisdomBites.controller;
@@ -16,6 +15,10 @@ module com.example.javafxreadingdemo {
     exports WisdomBites.model;
     opens WisdomBites.model to javafx.fxml;
 
-    exports Fortune_cookie_pages;
+    exports Fortune_cookie_pages;  // 무조건 필요 (Application 클래스를 런처가 접근하려면)
     opens Fortune_cookie_pages to javafx.fxml;
+
+    exports studytrackerapp;
+    opens studytrackerapp to javafx.fxml;
+
 }

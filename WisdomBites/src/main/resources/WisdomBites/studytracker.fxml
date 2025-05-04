@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="studytrackerapp.studytrackercontroller">
+
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: #F1B963; -fx-padding: 15;">
+            <Label text="Study Tracker" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <GridPane style="-fx-background-color: #FAEBD7; -fx-padding: 20;" hgap="30" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25"/>
+                <ColumnConstraints percentWidth="25"/>
+                <ColumnConstraints percentWidth="25"/>
+                <ColumnConstraints percentWidth="25"/>
+            </columnConstraints>
+
+            <!-- Daily Check-In -->
+            <VBox spacing="10" GridPane.columnIndex="0">
+                <Label text="Daily Check In" style="-fx-font-weight: bold;"/>
+                <CheckBox fx:id="mondayCheck" text="Monday"/>
+                <CheckBox fx:id="tuesdayCheck" text="Tuesday"/>
+                <CheckBox fx:id="wednesdayCheck" text="Wednesday"/>
+                <CheckBox fx:id="thursdayCheck" text="Thursday"/>
+                <CheckBox fx:id="fridayCheck" text="Friday"/>
+            </VBox>
+
+            <!-- Unit 1 -->
+            <VBox spacing="8" GridPane.columnIndex="1">
+                <TextField fx:id="unitCode1" promptText="Enter Unit Code" style="-fx-font-weight: bold;"/>
+                <VBox spacing="5">
+                    <Label text="Week 1"/><TextField fx:id="unit1Weeks1" promptText="Task"/>
+                    <Label text="Week 2"/><TextField fx:id="unit1Weeks2" promptText="Task"/>
+                    <Label text="Week 3"/><TextField fx:id="unit1Weeks3" promptText="Task"/>
+                    <Label text="Week 4"/><TextField fx:id="unit1Weeks4" promptText="Task"/>
+                    <Label text="Week 5"/><TextField fx:id="unit1Weeks5" promptText="Task"/>
+                    <Label text="Week 6"/><TextField fx:id="unit1Weeks6" promptText="Task"/>
+                    <Label text="Week 7"/><TextField fx:id="unit1Weeks7" promptText="Task"/>
+                    <Label text="Week 8"/><TextField fx:id="unit1Weeks8" promptText="Task"/>
+                </VBox>
+            </VBox>
+
+            <!-- Unit 2 -->
+            <VBox spacing="8" GridPane.columnIndex="2">
+                <TextField fx:id="unitCode2" promptText="Enter Unit Code" style="-fx-font-weight: bold;"/>
+                <VBox spacing="5">
+                    <Label text="Week 1"/><TextField fx:id="unit2Weeks1" promptText="Task"/>
+                    <Label text="Week 2"/><TextField fx:id="unit2Weeks2" promptText="Task"/>
+                    <Label text="Week 3"/><TextField fx:id="unit2Weeks3" promptText="Task"/>
+                    <Label text="Week 4"/><TextField fx:id="unit2Weeks4" promptText="Task"/>
+                    <Label text="Week 5"/><TextField fx:id="unit2Weeks5" promptText="Task"/>
+                    <Label text="Week 6"/><TextField fx:id="unit2Weeks6" promptText="Task"/>
+                    <Label text="Week 7"/><TextField fx:id="unit2Weeks7" promptText="Task"/>
+                    <Label text="Week 8"/><TextField fx:id="unit2Weeks8" promptText="Task"/>
+                </VBox>
+            </VBox>
+
+            <!-- Unit 3 -->
+            <VBox spacing="8" GridPane.columnIndex="3">
+                <TextField fx:id="unitCode3" promptText="Enter Unit Code" style="-fx-font-weight: bold;"/>
+                <VBox spacing="5">
+                    <Label text="Week 1"/><TextField fx:id="unit3Weeks1" promptText="Task"/>
+                    <Label text="Week 2"/><TextField fx:id="unit3Weeks2" promptText="Task"/>
+                    <Label text="Week 3"/><TextField fx:id="unit3Weeks3" promptText="Task"/>
+                    <Label text="Week 4"/><TextField fx:id="unit3Weeks4" promptText="Task"/>
+                    <Label text="Week 5"/><TextField fx:id="unit3Weeks5" promptText="Task"/>
+                    <Label text="Week 6"/><TextField fx:id="unit3Weeks6" promptText="Task"/>
+                    <Label text="Week 7"/><TextField fx:id="unit3Weeks7" promptText="Task"/>
+                    <Label text="Week 8"/><TextField fx:id="unit3Weeks8" promptText="Task"/>
+                </VBox>
+            </VBox>
+
+        </GridPane>
+    </center>
+
+</BorderPane>
