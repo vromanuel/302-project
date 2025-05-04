@@ -65,7 +65,7 @@ public class TaskController {
 
             topRow.getChildren().addAll(checkBox, titleLabel);
 
-            // Description and dateCreated, initially hidden
+      
             Label descLabel = new Label(task.getDescription());
             descLabel.setStyle("-fx-font-size: 13px; -fx-text-fill: #5d4037;");
             descLabel.setWrapText(true);
@@ -77,7 +77,7 @@ public class TaskController {
             dateCreatedLabel.setVisible(false);
             dateCreatedLabel.setManaged(false);
 
-            // Whole box click toggles both
+
             taskBox.setOnMouseClicked(e -> {
                 boolean showing = descLabel.isVisible();
                 descLabel.setVisible(!showing);
@@ -86,7 +86,7 @@ public class TaskController {
                 dateCreatedLabel.setManaged(!showing);
             });
 
-            // Checkbox triggers completion
+
             checkBox.setOnAction(e -> {
                 if (checkBox.isSelected()) {
                     TaskDao.completeTask(task.getId());
