@@ -30,8 +30,8 @@ public class LoginRegisterController {
     @FXML private TextField lastNameField;
 
     @FXML private TextField registerEmailField;
-    @FXML private TextField confirmEmailField;
     @FXML private TextField registerPassWordField;
+    @FXML private TextField confirmPasswordField;
 
     @FXML private VBox loginPane;
     @FXML private VBox registerPane;
@@ -52,11 +52,8 @@ public class LoginRegisterController {
             return;
         }
 
-
-
         User user = UserDao.login(email, passWord);
         StateController.setCurrentUser(user);
-
 
         if(user != null) {
             loginStatusLabel.setText("Registration successful! you have logged in!");
@@ -79,11 +76,10 @@ public class LoginRegisterController {
         String lastName = lastNameField.getText();
         String email = registerEmailField.getText();
         String passWord = registerPassWordField.getText();
-        String confirmEmail = confirmEmailField.getText();
+        String confirmPassword = confirmPasswordField.getText();
 
-        if (!email.equals(confirmEmail))
-        {
-            registerStatusLabel.setText("Emails do not match!!");
+        if (!passWord.equals(confirmPassword)) {
+            registerStatusLabel.setText("Passwords do not match! Please try again.");
             registerStatusLabel.setTextFill(Color.RED);
             return;
         }
@@ -121,7 +117,7 @@ public class LoginRegisterController {
             lastNameField.clear();
             registerEmailField.clear();
             registerPassWordField.clear();
-            confirmEmailField.clear();
+            confirmPasswordField.clear();
 
             SceneController.switchScene("login_view.fxml");
 
