@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="changed the colour palette for the login page">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/WisdomBites/login_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/login_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +172,8 @@
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="changed the colour palette for the login page" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the colour palette for the login page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
