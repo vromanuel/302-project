@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WisdomBites.db" beforeDir="false" afterPath="$PROJECT_DIR$/WisdomBites.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/model/TaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/model/TaskDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,12 +181,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/WisdomBites/model/TaskDao.java</url>
-          <line>71</line>
+          <line>73</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/WisdomBites/model/TaskDao.java</url>
-          <line>98</line>
+          <line>100</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
