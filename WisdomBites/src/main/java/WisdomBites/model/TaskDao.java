@@ -77,6 +77,7 @@ public class TaskDao {
 
     public static List<Task> getTasksByUser(int userID)
     {
+        // Gets every task from the task table related to a certain user
         try
         {
             String query = "SELECT * FROM task WHERE createdBy = ? AND completed = ?";
