@@ -79,7 +79,7 @@
 
         <!-- Bottom buttons -->
         <HBox spacing="30" alignment="CENTER">
-            <Button fx:id="progressButton" text="My Progress"
+            <Button fx:id="studyTrackerButton" text="My Progress"
                     style="
                     -fx-background-color: #fdd28e;
                     -fx-background-radius: 20;

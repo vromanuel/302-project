@@ -39,8 +39,8 @@ public class PMsgController {
 
         return getAIResponse(prompt,
                 weeksStudied >= 6 ? "You're mastering " + subject + "! Keep up the excellent work!" :
-                        weeksStudied >= 3 ? "At this rate, you'll be proficient in " + subject + " very soon!" :
-                                "Every session in " + subject + " brings you closer to mastery!"
+                weeksStudied >= 3 ? "At this rate, you'll be proficient in " + subject + " very soon!" :
+                "Every session in " + subject + " brings you closer to mastery!"
         );
     }
 
@@ -52,10 +52,10 @@ public class PMsgController {
     }
 
     private static String getStreakMessage(int days) {
-        if (days >= 7) return "🔥 You're on fire with your learning streak!";
-        if (days >= 3) return "📚 Great consistency with your studies!";
-        if (days > 0) return "✨ Keep building your learning habit!";
-        return "🚀 Let's start an amazing learning streak today!";
+        if (days >= 7) return "You're on fire with your learning streak!";
+        if (days >= 3) return "Great consistency with your studies!";
+        if (days > 0) return "Keep building your learning habit!";
+        return "Let's start an amazing learning streak today!";
     }
 
     private static String getAIResponse(String prompt, String fallback) {
@@ -76,19 +76,23 @@ public class PMsgController {
                     request, HttpResponse.BodyHandlers.ofString()
             );
 
-            if (response.statusCode() == 200) {
-                // Parse the JSON response properly
-                String jsonResponse = response.body();
-                int responseStart = jsonResponse.indexOf("\"response\":\"") + 12;
-                int responseEnd = jsonResponse.indexOf("\"", responseStart);
+            System.out.println("Raw response: " + response.body());
 
-                if (responseStart > 11 && responseEnd > responseStart) {
-                    String aiResponse = jsonResponse.substring(responseStart, responseEnd)
+            String jsonResponse = response.body();
+
+            // Match the full "response" value even with embedded quotes
+            int responseIndex = jsonResponse.indexOf("\"response\":\"");
+            if (responseIndex != -1) {
+                int start = responseIndex + 11;
+                int end = jsonResponse.indexOf("\",\"done\":", start);
+                if (end > start) {
+                    String aiResponse = jsonResponse.substring(start, end)
                             .replace("\\n", "\n")
                             .replace("\\\"", "\"")
                             .trim();
 
-                    // Ensure the response isn't empty
+                    System.out.println("Final cleaned AI response:\n" + aiResponse);
+
                     if (!aiResponse.isEmpty()) {
                         return aiResponse;
                     }
@@ -97,7 +101,7 @@ public class PMsgController {
         } catch (Exception e) {
             System.err.println("AI Service Error: " + e.getMessage());
             // Uncomment for debugging:
-            // e.printStackTrace();
+            e.printStackTrace();
         }
         return fallback;
     }
