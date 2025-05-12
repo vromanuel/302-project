@@ -24,7 +24,7 @@ public class HomePageController {
     @FXML private Pane analogClockPane;
     @FXML private Label dateLabel;
 
-    @FXML private Button predictionsButton, todoButton, fortuneButton, progressButton, challengesButton;
+    @FXML private Button predictionsButton, todoButton, fortuneButton, studyTrackerButton, challengesButton;
     @FXML private Button logOutButton;
 
     private Line hourHand, minuteHand, secondHand;
@@ -64,7 +64,7 @@ public class HomePageController {
 
         todoButton.setOnAction((e -> SceneController.switchScene("create_task.fxml")));
 
-        progressButton.setOnAction((e -> SceneController.switchScene("studytracker.fxml")));
+        studyTrackerButton.setOnAction((e -> SceneController.switchScene("StudyTracker.fxml")));
     }
 
 

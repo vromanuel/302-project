@@ -15,10 +15,8 @@ module com.example.javafxreadingdemo {
     exports WisdomBites.model;
     opens WisdomBites.model to javafx.fxml;
 
-    exports Fortune_cookie_pages;  // 무조건 필요 (Application 클래스를 런처가 접근하려면)
+    exports Fortune_cookie_pages;
     opens Fortune_cookie_pages to javafx.fxml;
 
-    exports studytrackerapp;
-    opens studytrackerapp to javafx.fxml;
 
 }
