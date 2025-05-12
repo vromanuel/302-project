@@ -1,10 +1,13 @@
 package WisdomBites.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
 public class StudyTrackerController {
+
+    @FXML private Button backButton;
 
     // Daily Check-In checkboxes
     @FXML private CheckBox mondayCheck;
@@ -32,4 +35,9 @@ public class StudyTrackerController {
     public void initialize() {
         // initialization logic (optional)
     }
+    @FXML
+    private void handleBack() {
+        SceneController.switchScene("home_page.fxml");
+    }
+
 }

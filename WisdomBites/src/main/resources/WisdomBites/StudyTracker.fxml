@@ -7,10 +7,20 @@
             fx:controller="WisdomBites.controller.StudyTrackerController">
 
     <top>
-        <HBox alignment="CENTER" style="-fx-background-color: #F1B963; -fx-padding: 15;">
-            <Label text="Study Tracker" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #F1B963; -fx-padding: 15;">
+            <Button fx:id="backButton"
+                    text="← Back"
+                    onAction="#handleBack"
+                    style="-fx-background-color: #fdd28e;
+                       -fx-background-radius: 20;
+                       -fx-font-size: 16px;
+                       -fx-padding: 5 15;
+                       -fx-text-fill: black;" />
+            <Label text="Study Tracker"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;" />
         </HBox>
     </top>
+
 
     <center>
         <GridPane style="-fx-background-color: #FAEBD7; -fx-padding: 20;" hgap="30" vgap="15">
