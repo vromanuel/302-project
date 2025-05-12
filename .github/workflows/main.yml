@@ -16,4 +16,5 @@ jobs:
         distribution: 'temurin'
 
     - name: Run Unit Tests
+      working-directory: ./WisdomBites
       run: mvn clean test
