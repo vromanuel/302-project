@@ -4,6 +4,7 @@ module com.example.javafxreadingdemo {
     requires java.management;
     requires org.xerial.sqlitejdbc;
     requires java.desktop;
+    requires java.net.http;
 
 
     opens WisdomBites to javafx.fxml;
@@ -17,6 +18,4 @@ module com.example.javafxreadingdemo {
 
     exports Fortune_cookie_pages;
     opens Fortune_cookie_pages to javafx.fxml;
-
-
 }
