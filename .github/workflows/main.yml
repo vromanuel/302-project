@@ -13,4 +13,4 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     - name: Build with Gradle
-      run: ./gradlew build
+      run: mvn clean javafx:run
