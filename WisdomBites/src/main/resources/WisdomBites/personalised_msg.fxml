@@ -38,16 +38,26 @@
                           -fx-text-fill: #5a3921;
                           -fx-font-family: 'Segoe UI', sans-serif;" />
 
-            <ImageView fx:id="cookieImage"
-                       fitWidth="200"
-                       preserveRatio="true"
-                       style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0.3, 0, 2);" />
+            <TextField fx:id="nameField"
+                       promptText="Enter your name"
+                       style="-fx-font-size: 16px;
+                  -fx-padding: 10;
+                  -fx-border-color: black;
+                  -fx-border-width: 1;" />
+
+            <TextField fx:id="subjectField"
+                       promptText="Enter subject (e.g., CAB 123)"
+                       style="-fx-font-size: 16px;
+                  -fx-padding: 10;
+                  -fx-border-color: black;
+                  -fx-border-width: 1;" />
+
 
             <TextArea fx:id="predictionBox"
                       editable="false"
                       wrapText="true"
-                      prefWidth="500"
-                      prefHeight="120"
+                      prefWidth="800"
+                      prefHeight="300"
                       style="-fx-background-color: white;
                              -fx-border-color: black;
                              -fx-border-width: 2;

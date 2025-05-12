@@ -7,29 +7,52 @@
 <StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
            fx:controller="WisdomBites.controller.HomePageController"
            prefWidth="1600" prefHeight="900"
-           style="
-           -fx-background-color: #f5e1c0;
-            ">
+           style="-fx-background-color: #efddbb;">
+
+    <!-- clock + date aligned top-left -->
+    <AnchorPane StackPane.alignment="TOP_LEFT">
+        <VBox fx:id="clockContainer" spacing="12"
+              AnchorPane.topAnchor="20.0"
+              AnchorPane.leftAnchor="35.0"
+              alignment="CENTER">
+
+            <!-- Date Label -->
+            <Label fx:id="dateLabel"
+                   style="-fx-font-size: 24px;
+                      -fx-text-fill: #5a3921;
+                      -fx-font-family: 'Segoe UI Semibold', monospace;" />
+
+            <!-- Digital Time -->
+            <Label fx:id="digitalClockLabel"
+                   style="-fx-font-size: 24px;
+                      -fx-text-fill: #5a3921;
+                      -fx-background-color: #fdd28e;
+                      -fx-background-radius: 10;
+                      -fx-padding: 4 12;
+                      -fx-font-family: monospace;" />
+
+            <!-- Analog Clock -->
+            <StackPane alignment="CENTER">
+                <Pane fx:id="analogClockPane"
+                      prefWidth="150" prefHeight="150"
+                      style="-fx-background-color: transparent;" />
+            </StackPane>
+        </VBox>
+    </AnchorPane>
+
 
     <VBox spacing="30" alignment="CENTER" StackPane.alignment="CENTER">
         <Label fx:id="welcomeLabel" style="
            -fx-text-fill: #5a3921;
            -fx-font-size: 28px;
            -fx-font-weight: bold;
-           -fx-font-family: 'Segoe UI', Arial, sans-serif;
+           -fx-font-family: 'Segoe UI', monospace, monospace;
            -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0.5, 0, 1);
            -fx-padding: 0 0 15 0;
        "/>
 
         <!-- Top buttons -->
         <HBox spacing="20" alignment="CENTER">
-            <Button fx:id="quotesButton" text="Quotes"
-                    style="
-                    -fx-background-color: #fdd28e;
-                    -fx-background-radius: 20;
-                    -fx-font-size: 18px;
-                    "/>
-
             <Button fx:id="predictionsButton" text="Predictions"
                     style="-fx-background-color: #fdd28e;
                     -fx-background-radius: 20;
@@ -56,7 +79,7 @@
 
         <!-- Bottom buttons -->
         <HBox spacing="30" alignment="CENTER">
-            <Button fx:id="progressButton" text="My Progress"
+            <Button fx:id="studyTrackerButton" text="My Progress"
                     style="
                     -fx-background-color: #fdd28e;
                     -fx-background-radius: 20;

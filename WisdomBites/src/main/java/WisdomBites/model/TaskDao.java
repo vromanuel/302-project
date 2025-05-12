@@ -47,11 +47,13 @@ public class TaskDao {
     {
         try
         {
-
+            // Creates an SQL query with escaping
             String query = "INSERT INTO task (createdBy, dateCreated, title, description, completed) VALUES (?,?,?,?,?)";
 
+            // Prepares a statement with that query
             PreparedStatement statement = connection.prepareStatement(query);
 
+            // Set the first value to the current, logged in user
             statement.setInt(1, StateController.currentUser.getId());
 
             String date = LocalDate.now().toString();
@@ -75,6 +77,7 @@ public class TaskDao {
 
     public static List<Task> getTasksByUser(int userID)
     {
+        // Gets every task from the task table related to a certain user
         try
         {
             String query = "SELECT * FROM task WHERE createdBy = ? AND completed = ?";

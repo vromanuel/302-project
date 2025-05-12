@@ -1,31 +1,39 @@
 package WisdomBites.controller;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.control.Button;
-import javafx.event.ActionEvent;
 
 public class PersonalisedMsg {
 
-    @FXML
-    private TextArea predictionBox;
+    @FXML private TextArea predictionBox;
+    @FXML private ImageView cookieImage;
+    @FXML private Button backButton;
+    @FXML private TextField nameField;
+    @FXML private TextField subjectField;
 
-    @FXML
-    private ImageView cookieImage;
 
     @FXML
     public void handleGenerate() {
-        String name = "Tariq";
-        String subject = "CAB 123";
+        String name = nameField.getText().isBlank() ? "Student" : nameField.getText();
+        String subject = subjectField.getText().isBlank() ? "your subject" : subjectField.getText();
         int streakDays = 4;
         int weeksStudied = 3;
 
-        String welcome = PMsgController.generateWelcomeMessage(name, subject, streakDays);
-        String prediction = PMsgController.generatePrediction(subject, weeksStudied);
+        // Run LLM calls in a background thread
+        new Thread(() -> {
+            String welcome = PMsgController.generateWelcomeMessage(name, subject, streakDays);
+            String prediction = PMsgController.generatePrediction(subject, weeksStudied);
 
-        predictionBox.setText(welcome + "\n\n" + prediction);
+            String finalMessage = welcome + "\n\n" + prediction;
+
+            // Update the TextArea on the JavaFX Application Thread
+            Platform.runLater(() -> predictionBox.setText(finalMessage));
+        }).start();
     }
 
     @FXML
@@ -33,19 +41,8 @@ public class PersonalisedMsg {
         SceneController.switchScene("home_page.fxml");
     }
 
-
-    @FXML
-    private Button backButton;
-
     @FXML
     public void initialize() {
-
-
-        backButton.setOnAction(e -> {
-            SceneController.switchScene("home_page.fxml");
-        });
-
     }
-
 }
 

@@ -1,0 +1,183 @@
+    58	Manny
+    34	Kimiya-HDZ
+    20	tariqdaly2708
+     9	JK76761
+     7	Tejasri303
+     2	vromanuel
+e7cb7da was Manny, 5 hours ago, message: connected pages
+dc0e7fb was Manny, 6 hours ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+19e56e4 was Manny, 6 hours ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+6a9058d was Kimiya-HDZ, 6 hours ago, message: Update README.md
+b91a80e was Manny, 6 hours ago, message: yessir
+964f425 was Kimiya-HDZ, 6 hours ago, message: Update README.md
+36783e4 was Kimiya-HDZ, 6 hours ago, message: final README.md
+15fc304 was Kimiya-HDZ, 6 hours ago, message: Update README.md
+8210b28 was Kimiya-HDZ, 6 hours ago, message: Update README.md
+e052efb was Kimiya-HDZ, 6 hours ago, message: update WisdomeBites
+f4a12e3 was Kimiya-HDZ, 7 hours ago, message: Update workspace.xml
+103783c was Kimiya-HDZ, 7 hours ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+229fe01 was Kimiya-HDZ, 7 hours ago, message: Update WisdomBites.db
+88cb81d was JK76761, 8 hours ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+09cc579 was JK76761, 8 hours ago, message: code studytracker
+f2fa8dd was tariqdaly2708, 9 hours ago, message: Formatted styling better
+1b65a3d was Kimiya-HDZ, 20 hours ago, message: Add 'back' button to to-do-list page
+daf0011 was Kimiya-HDZ, 21 hours ago, message: Merge branch 'progress-tracker-dev'
+bb2ae7b was Kimiya-HDZ, 21 hours ago, message: update WisdomBites
+1e3111c was Kimiya-HDZ, 21 hours ago, message: add logo to the app
+8524fc2 was Kimiya-HDZ, 21 hours ago, message: add logo to the app
+4c4c1ee was Kimiya-HDZ, 22 hours ago, message: Merge branch 'main' into progress-tracker-dev
+26cd822 was Kimiya-HDZ, 22 hours ago, message: update WisdomBites
+2205264 was Kimiya-HDZ, 22 hours ago, message: made some changes
+87cdb56 was Kimiya-HDZ, 29 hours ago, message: add logo to resources
+cfa619f was Kimiya-HDZ, 29 hours ago, message: Merge branch 'main' into progress-tracker-dev
+4b6fe95 was Kimiya-HDZ, 29 hours ago, message: Update WisdomBites.db
+644534a was Kimiya-HDZ, 29 hours ago, message: fixed the message typo
+d0d3915 was JK76761, 2 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+fae2baf was JK76761, 2 days ago, message: study_tracker
+8ed2bd0 was Manny, 2 days ago, message: fixed stuff
+3332526 was Manny, 2 days ago, message: added to do list functionality
+80c2f2d was Manny, 2 days ago, message: yupyup
+90b7fd2 was tariqdaly2708, 3 days ago, message: deleting unused old files
+3a4f1b5 was tariqdaly2708, 3 days ago, message: Made personalised msg files
+15a4000 was tariqdaly2708, 3 days ago, message: Merge branch 'main' into tariq
+2a24c0b was JK76761, 5 days ago, message: wdwddw
+0778cc4 was Manny, 5 days ago, message: pushed
+c2711b1 was Manny, 5 days ago, message: added backend logout button functionality
+8f0fa1c was tariqdaly2708, 5 days ago, message: removed home page test
+924f7cd was Manny, 5 days ago, message: manny
+38381a9 was Manny, 5 days ago, message: changed stuff
+f3df249 was Manny, 5 days ago, message: expanded on backend functionality for tasks
+6fd9a98 was tariqdaly2708, 5 days ago, message: adding pmsg to conotroller
+fe7892c was tariqdaly2708, 5 days ago, message: changed size for fortune page
+a10dadc was Manny, 5 days ago, message: changed gitignore file
+7269b76 was JK76761, 6 days ago, message: Update workspace.xml
+c3091d4 was Manny, 6 days ago, message: added test suite
+e289fd9 was Manny, 6 days ago, message: linked login to homepage
+2ffb846 was Manny, 6 days ago, message: added cooler things
+70c4438 was tariqdaly2708, 6 days ago, message: Added home page test before linking to login form
+b6bd631 was tariqdaly2708, 6 days ago, message: adding home page design fxml
+2c58783 was tariqdaly2708, 6 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+8b9f183 was Manny, 6 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+91bcca7 was Manny, 6 days ago, message: stuff
+c6f9c4a was tariqdaly2708, 6 days ago, message: Added home page controller
+1bba1f0 was tariqdaly2708, 6 days ago, message: FIXED REGISTER FORM
+044d8dd was Manny, 6 days ago, message: changed registration to look cooler
+54d882b was tariqdaly2708, 7 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+3256a35 was tariqdaly2708, 7 days ago, message: Added home page, and fixed register form
+2eb66f7 was JK76761, 7 days ago, message: fixing again button and coordinate
+696f4d0 was JK76761, 9 days ago, message: new code for main pages
+0d965c7 was Manny, 12 days ago, message: added some commenting for consistency and momentum!!
+9dc235e was Tejasri303, 12 days ago, message: changed
+07eba26 was Manny, 12 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+aff2cd2 was Manny, 12 days ago, message: fixed SQL
+ab0ce1f was Tejasri303, 12 days ago, message: changed location of directory
+0fc5925 was Manny, 12 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+8ad6d8c was Manny, 12 days ago, message: integrated StudySessionTable and DAO into the whole app
+a4492c6 was Tejasri303, 12 days ago, message: Merge branch 'mains'
+c30b935 was JK76761, 12 days ago, message: Merge branch 'mains'
+447c3b5 was Tejasri303, 12 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+0188327 was Tejasri303, 12 days ago, message: Merge branch 'PersonalisedMessages'
+6fe64f3 was Tejasri303, 12 days ago, message: Resolved .iml conflict while merging PersonalisedMessages into main
+b202a4a was Manny, 12 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+5b72993 was Manny, 12 days ago, message: changed
+e07da20 was Kimiya-HDZ, 12 days ago, message: Update DBConnection to dynamic file path
+04b7849 was Kimiya-HDZ, 12 days ago, message: changed location of tracker directory
+0ff591c was JK76761, 12 days ago, message: Update To_do_list.java
+9960f1e was Kimiya-HDZ, 12 days ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+3f13fb4 was Manny, 12 days ago, message: Merge branch 'pr/9'
+e50cc44 was JK76761, 12 days ago, message: added some codes
+6c7e47c was Manny, 12 days ago, message: yeye
+bc6d661 was Kimiya-HDZ, 12 days ago, message: Merge branch 'main' into progress-tracker-dev
+faf8c82 was Manny, 13 days ago, message: yuh
+284e920 was Tejasri303, 13 days ago, message: Added. some code
+f91e48d was Manny, 2 weeks ago, message: sup tariq
+fb31f83 was Kimiya-HDZ, 2 weeks ago, message: added StudySession test and fixed database path
+bc33a59 was Manny, 2 weeks ago, message: added a way to store states
+37d0df4 was Manny, 2 weeks ago, message: stuff
+0655244 was tariqdaly2708, 2 weeks ago, message: Update vcs.xml
+fa9f5e3 was tariqdaly2708, 2 weeks ago, message: fixed errors and formatted login styling
+0883978 was Kimiya-HDZ, 2 weeks ago, message: Merge branch 'progress-tracker-dev'
+b935c40 was Kimiya-HDZ, 2 weeks ago, message: add StudySessionDAO and clean project files
+e1711d3 was Kimiya-HDZ, 2 weeks ago, message: fixed .gitignore
+85bcf76 was Tejasri303, 2 weeks ago, message: Personalised Messages
+1980fb7 was tariqdaly2708, 2 weeks ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+771e85b was Manny, 2 weeks ago, message: fixed up my controller to match the new cooler login/register fxml file
+32ab993 was tariqdaly2708, 2 weeks ago, message: Update login_view.fxml
+41397d0 was Manny, 2 weeks ago, message: stuff
+5486147 was tariqdaly2708, 2 weeks ago, message: Update LoginRegisterController.java
+a74bbf6 was tariqdaly2708, 2 weeks ago, message: login and register page test commit
+9574697 was Kimiya-HDZ, 2 weeks ago, message: finished the code for StudySessionDAO
+f1801cd was Kimiya-HDZ, 2 weeks ago, message: deleted an unnecessary file
+340e5da was Kimiya-HDZ, 2 weeks ago, message: fixed the bug in StudySession file
+5ce888a was Kimiya-HDZ, 2 weeks ago, message: add StudySessionDAO and clean project files
+a65e48e was Kimiya-HDZ, 2 weeks ago, message: added StudySession model and basic progress tracker structure
+9d09061 was Manny, 2 weeks ago, message: added lots of comments, changed the FXML file to something way better
+17e20be was Manny, 2 weeks ago, message: crying tears of joy
+5520f2b was Manny, 2 weeks ago, message: fixed EVERYTHING bruh
+67ace54 was Manny, 2 weeks ago, message: Merge branch 'manny-changes'
+51796e6 was Manny, 2 weeks ago, message: yo
+baad350 was Manny, 2 weeks ago, message: Merge branch 'manny-changes'
+7eabcae was Manny, 2 weeks ago, message: cool
+afe4aef was Manny, 2 weeks ago, message: Revert "sadfasdf"
+099038d was Manny, 2 weeks ago, message: asdf
+d6e855f was Manny, 2 weeks ago, message: Revert "Merge branch 'manny-changes'"
+e404cb8 was Manny, 2 weeks ago, message: Merge branch 'manny-changes'
+062863e was Manny, 2 weeks ago, message: sadfasdf
+deabcb3 was Manny, 2 weeks ago, message: cool adjustments
+b579c5f was Manny, 2 weeks ago, message: yeye
+103e059 was Manny, 2 weeks ago, message: Merge branch 'manny-changes'
+22aca00 was Manny, 2 weeks ago, message: ye
+a7f4efe was Manny, 2 weeks ago, message: added commenting
+1bdf6d5 was Manny, 2 weeks ago, message: changes
+8a6159c was Manny, 2 weeks ago, message: changed file structure, added User table and backend functionality
+94c5916 was Manny, 3 weeks ago, message: added database connection
+12ef42c was Manny, 3 weeks ago, message: refactored directory
+e39f0d4 was Manny, 5 weeks ago, message: gllllllllt
+3d2de2d was Tejasri303, 5 weeks ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+60f89f5 was Manny, 5 weeks ago, message: Create .gitignore
+fd37cd5 was Tejasri303, 5 weeks ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+af86b64 was Manny, 5 weeks ago, message: Merge branch 'main' of https://github.com/vromanuel/302-project
+cfef4e1 was Manny, 5 weeks ago, message: legit
+6325ebb was Tejasri303, 5 weeks ago, message: added more comments
+3ac1422 was Kimiya-HDZ, 5 weeks ago, message: adding second comment
+e3753e5 was Kimiya-HDZ, 5 weeks ago, message: adding second comment
+58e415a was Tejasri303, 5 weeks ago, message: Added a comment
+9534b74 was Tejasri303, 5 weeks ago, message: Add a comment
+1ab77b9 was Kimiya-HDZ, 5 weeks ago, message: Merge pull request #6 from Kimiya-HDZ/main
+1601c4f was Kimiya-HDZ, 5 weeks ago, message: creating quotes file
+a6da524 was Kimiya-HDZ, 5 weeks ago, message: added new comment
+2fdc03d was Kimiya-HDZ, 5 weeks ago, message: Merge pull request #5 from Kimiya-HDZ/quotes
+a176eb9 was Kimiya-HDZ, 5 weeks ago, message: adding comment
+55f3f29 was Manny, 5 weeks ago, message: Merge branch 'manny-changes'
+23ae293 was Manny, 5 weeks ago, message: add comment
+c683b00 was Manny, 5 weeks ago, message: dsfasdf
+ea5716d was Manny, 5 weeks ago, message: Merge branch 'manny-changes'
+b937b40 was Manny, 5 weeks ago, message: Update HelloApplication.java
+9094187 was JK76761, 6 weeks ago, message: Merge branch 'main' of https://github.com/JK76761/302-project
+a1fbc13 was JK76761, 6 weeks ago, message: josh first commit
+d1bfb04 was tariqdaly2708, 6 weeks ago, message: test running code 2
+70a4a0a was tariqdaly2708, 6 weeks ago, message: FIRST TEST RUNNING CODE
+01c374c was tariqdaly2708, 6 weeks ago, message: FIRST TEST RUNNING CODE
+0eeed3c was tariqdaly2708, 6 weeks ago, message: Create workspace.xml
+361d454 was Kimiya-HDZ, 6 weeks ago, message: Merge pull request #4 from Kimiya-HDZ/kimiya-branch
+c4fc95c was Kimiya-HDZ, 6 weeks ago, message: adding a new line
+5db44ae was Manny, 6 weeks ago, message: changed some text
+2458377 was Manny, 6 weeks ago, message: Update HelloApplication.java
+b87070b was Manny, 6 weeks ago, message: Adding stuff to the gui
+4e9704c was Manny, 6 weeks ago, message: Merge branch 'manny-changes'
+c91b6d8 was Manny, 6 weeks ago, message: yeye
+de2b903 was Manny, 6 weeks ago, message: Merge branch 'manny-changes'
+0a00a9c was Manny, 6 weeks ago, message: ye
+5f4917d was Manny, 6 weeks ago, message: Merge branch 'manny-changes'
+a8d2ae7 was Manny, 6 weeks ago, message: started on UI!!
+d92fe1e was vromanuel, 7 weeks ago, message: Create README.md
+f6c91e7 was vromanuel, 7 weeks ago, message: Create hello.readme
+ca018de was vromanuel, 7 weeks ago, message: Merge pull request #3 from Kimiya-HDZ/main
+63501a9 was vromanuel, 7 weeks ago, message: Merge branch 'main' into main
+089f92a was vromanuel, 7 weeks ago, message: Merge pull request #2 from Tejasri303/main
+4e6be0c was Tejasri303, 7 weeks ago, message: saved changes
+8f5f393 was Kimiya-HDZ, 7 weeks ago, message: second change
+5ba9577 was vromanuel, 7 weeks ago, message: Merge pull request #1 from Kimiya-HDZ/kimya
+f5bbae7 was Kimiya-HDZ, 7 weeks ago, message: made some changes
+8b08aa5 was tariqdaly2708, 7 weeks ago, message: tester
+941f173 was Manny, 7 weeks ago, message: creating test.txt
