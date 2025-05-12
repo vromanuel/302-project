@@ -6,6 +6,7 @@ WisdomBites is a JavaFX-based desktop application designed to help students stay
 
 <!-- Trigger build -->
 
+
 ## Features
 
 - **User Login & Registration** (with persistence)
