@@ -28,8 +28,8 @@ public class HelloApplication extends Application {
         StudySessionDAO studySessionDAO = new StudySessionDAO();
 
         // Set fixed stage size ONCE
-        stage.setWidth(1200);
-        stage.setHeight(900);
+        stage.setWidth(900);
+        stage.setHeight(650);
         stage.setResizable(false); // Prevent resizing through the app
         stage.centerOnScreen(); // Centre the window
 

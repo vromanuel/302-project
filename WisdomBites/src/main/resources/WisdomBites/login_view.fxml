@@ -7,86 +7,83 @@
 
 <StackPane xmlns:fx="http://javafx.com/fxml"
            fx:controller="WisdomBites.controller.LoginRegisterController"
-           prefWidth="1600" prefHeight="900"
+           prefWidth="900" prefHeight="650"
            style="-fx-background-color: #CCE3E9;">
 
     <VBox spacing="20" alignment="TOP_CENTER" StackPane.alignment="TOP_CENTER">
         <padding>
-            <Insets top="30"/>
+            <Insets top="20"/>
         </padding>
 
         <!-- Toggle Switch -->
         <HBox alignment="CENTER" spacing="10">
 
-            <Label text="Login" style="-fx-font-size: 20; -fx-text-fill: #254E66;" />
+            <Label text="Login" style="-fx-font-size: 18; -fx-text-fill: #254E66;" />
             <StackPane fx:id="toggleSwitch" onMouseClicked="#flipCard"
                        prefWidth="60" prefHeight="30"
                        style="-fx-background-color: white; -fx-background-radius: 15;">
                 <Circle fx:id="toggleThumb" radius="12" fill="#254E66"/>
             </StackPane>
 
-            <Label text="Register" style="-fx-font-size: 20; -fx-text-fill: #254E66;" />
+            <Label text="Register" style="-fx-font-size: 18; -fx-text-fill: #254E66;" />
         </HBox>
 
         <!-- Card area -->
-        <StackPane prefWidth="1000" prefHeight="700"
-                   maxWidth="1000" maxHeight="700"
+        <StackPane maxWidth="700" maxHeight="400"
                    style="-fx-background-color: white;
                           -fx-background-radius: 30;
-                          -fx-padding: 60;
+                          -fx-padding: 40;
                           -fx-border-color: #76AEBC;
                           -fx-border-width: 2;
                           -fx-border-style: solid;
                           -fx-border-radius: 30;">
 
             <!-- LOGIN FORM -->
-            <VBox fx:id="loginPane" spacing="20" alignment="CENTER">
+            <VBox fx:id="loginPane" spacing="16" alignment="CENTER" maxWidth="500">
 
                 <!-- Logo -->
                 <ImageView fx:id="logoImage"
-                           fitHeight="160"
-                           fitWidth="160"
-                           preserveRatio="true"
-                           style="-fx-padding: 0 0 20 0;" />
+                           fitHeight="150"
+                           fitWidth="150"
+                           preserveRatio="true" />
 
-                <Label text="Login" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #254E66;"/>
+                <Label text="Login" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #254E66;"/>
 
-                <TextField fx:id="loginEmailField" promptText="Email Address" style="-fx-background-color: #E7B96C; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
+                <TextField fx:id="loginEmailField" promptText="Email Address" maxWidth="350" style="-fx-background-color: #E7B96C; -fx-pref-height: 45; -fx-font-size: 14; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
 
-                <PasswordField fx:id="loginPassWordField" promptText="Password" style="-fx-background-color: #E7B96C; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
+                <PasswordField fx:id="loginPassWordField" promptText="Password" maxWidth="350" style="-fx-background-color: #E7B96C; -fx-pref-height: 45; -fx-font-size: 14; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
 
-                <Label fx:id="loginStatusLabel" style = "-fx-text-fill: red; -fx-font-size: 14;" />
+                <Label fx:id="loginStatusLabel" style = "-fx-text-fill: red; -fx-font-size: 13;" />
 
-                <Button text="Let’s Go!" onAction="#loginButtonHandle" style="-fx-background-color: #76AEBC; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: white;"/>
+                <Button text="Let’s Go!" onAction="#loginButtonHandle" maxWidth="200" style="-fx-background-color: #76AEBC; -fx-pref-height: 45; -fx-font-size: 15; -fx-text-fill: white;"/>
 
                 <Label text="Don't have an account? Register here"
                        onMouseClicked="#flipCard"
-                       style="-fx-text-fill: #254E66; -fx-underline: true; -fx-font-size: 16; -fx-cursor: hand;"/>
+                       style="-fx-text-fill: #254E66; -fx-underline: true; -fx-font-size: 14; -fx-cursor: hand;"/>
 
             </VBox>
 
             <!-- REGISTER FORM -->
-            <VBox fx:id="registerPane" spacing="20" alignment="CENTER" visible="false">
-                <Label text="Register" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #254E66;"/>
+            <VBox fx:id="registerPane" spacing="16" alignment="CENTER" maxWidth="500" visible="false">
+                <Label text="Register" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #254E66;"/>
 
                 <HBox spacing="10" alignment="CENTER">
-                    <TextField fx:id="firstNameField" promptText="First Name" style="-fx-background-color: #e7b96c; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
-                    <TextField fx:id="lastNameField" promptText="Last Name" style="-fx-background-color: #e7b96c; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
+                    <TextField fx:id="firstNameField" promptText="First Name" style="-fx-background-color: #e7b96c; -fx-pref-height: 45; -fx-font-size: 14; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
+                    <TextField fx:id="lastNameField" promptText="Last Name" style="-fx-background-color: #e7b96c; -fx-pref-height: 45; -fx-font-size: 14; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
                 </HBox>
 
-                <TextField fx:id="registerEmailField" promptText="Email" style="-fx-background-color: #e7b96c; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
+                <TextField fx:id="registerEmailField" promptText="Email" style="-fx-background-color: #e7b96c; -fx-pref-height: 45; -fx-font-size: 14; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
 
-                <PasswordField fx:id="registerPassWordField" promptText="Password" style="-fx-background-color: #e7b96c; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
+                <PasswordField fx:id="registerPassWordField" promptText="Password" style="-fx-background-color: #e7b96c; -fx-pref-height: 45; -fx-font-size: 14; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
 
-                <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" style="-fx-background-color: #e7b96c; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
+                <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" style="-fx-background-color: #e7b96c; -fx-pref-height: 45; -fx-font-size: 14; -fx-text-fill: black; -fx-prompt-text-fill: #254E66;"/>
 
-                <Label fx:id="registerStatusLabel" style = "-fx-text-fill: red; -fx-font-size: 14;" />
+                <Label fx:id="registerStatusLabel" style = "-fx-text-fill: red; -fx-font-size: 13;" />
 
 
 
-                <Button text="Let’s Go!" onAction="#registerButtonHandle" style="-fx-background-color: #76AEBC; -fx-pref-height: 50; -fx-font-size: 16; -fx-text-fill: white;"/>
+                <Button text="Let’s Go!" onAction="#registerButtonHandle" style="-fx-background-color: #76AEBC; -fx-pref-height: 45; -fx-font-size: 15; -fx-text-fill: white;"/>
             </VBox>
-
         </StackPane>
     </VBox>
 </StackPane>
