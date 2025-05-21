@@ -19,11 +19,15 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.layout.StackPane;
 
+import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
+
 import java.io.IOException;
 
 
 public class LoginRegisterController {
 
+    @FXML private ImageView logoImage;
     @FXML private TextField loginEmailField;
     @FXML private TextField loginPassWordField;
     @FXML private TextField firstNameField;
@@ -133,6 +137,11 @@ public class LoginRegisterController {
     @FXML
     public void initialize() {
         toggleThumb.setTranslateX(-15); // move left initially
+
+        // Load the logo image
+        logoImage.setImage(new javafx.scene.image.Image(
+                getClass().getResource("/WisdomBites/logo.png").toExternalForm()
+        ));
     }
 
     @FXML
