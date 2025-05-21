@@ -3,6 +3,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
+<?import javafx.scene.image.ImageView?>
 
 <StackPane xmlns:fx="http://javafx.com/fxml"
            fx:controller="WisdomBites.controller.LoginRegisterController"
@@ -40,6 +41,13 @@
 
             <!-- LOGIN FORM -->
             <VBox fx:id="loginPane" spacing="20" alignment="CENTER">
+
+                <!-- Logo -->
+                <ImageView fx:id="logoImage"
+                           fitHeight="160"
+                           fitWidth="160"
+                           preserveRatio="true"
+                           style="-fx-padding: 0 0 20 0;" />
 
                 <Label text="Login" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #254E66;"/>
 
