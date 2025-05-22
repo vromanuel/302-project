@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="changed the placement of date and time">
+    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="made the app look visually better">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/WisdomBites/home_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/home_page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/WisdomBites/login_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/login_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747905694364</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="made the app look visually better">
+      <option name="closed" value="true" />
+      <created>1747907042639</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747907042639</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -233,6 +241,7 @@
     <MESSAGE value="added the app name to the window title" />
     <MESSAGE value="made a small change in one of the buttons" />
     <MESSAGE value="changed the placement of date and time" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the placement of date and time" />
+    <MESSAGE value="made the app look visually better" />
+    <option name="LAST_COMMIT_MESSAGE" value="made the app look visually better" />
   </component>
 </project>

@@ -42,7 +42,7 @@
             <VBox fx:id="loginPane" spacing="10" alignment="CENTER" maxWidth="500">
 
                 <!-- New line: Add welcome text -->
-                <Label text="Welcome to" style="-fx-font-size: 20; -fx-text-fill: #254E66; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-padding: 0 0 10 0;"/>
+                <Label text="Welcome To" style="-fx-font-size: 20; -fx-text-fill: #254E66; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-padding: 0 0 10 0;"/>
 
                 <!-- Logo -->
                 <ImageView fx:id="logoImage"
