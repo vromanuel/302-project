@@ -34,7 +34,7 @@ public class HomePageController {
         welcomeLabel.setText(String.format("Welcome, %s!", StateController.currentUser.getFirstName()));
 
         // fortune image
-        cookieImage.setImage(new Image(getClass().getResource("/close.cookie.png").toExternalForm()));
+        cookieImage.setImage(new Image(getClass().getResource("/home_page_logo.png").toExternalForm()));
 
         // Update nav bar time every second
         Timeline navTimeUpdater = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
@@ -47,9 +47,7 @@ public class HomePageController {
         navTimeUpdater.play();
 
         // button actions
-        fortuneButton.setOnAction(e -> {
-            System.out.println("Get your fortune clicked!");
-        });
+        fortuneButton.setOnAction(e -> SceneController.switchScene("fortune_view.fxml"));
 
         predictionsButton.setOnAction(e -> {
             SceneController.switchScene("personalised_msg.fxml");

@@ -70,7 +70,7 @@
         <ImageView fx:id="cookieImage" fitWidth="180" preserveRatio="true" />
 
         <!-- Get Your Fortune Button -->
-        <Button fx:id="fortuneButton" text="Get your fortune"
+        <Button fx:id="fortuneButton" text="Get your cookie!"
                 prefWidth="180"
                 style="-fx-background-color: #fdd28e;
                 -fx-text-fill: #5a3921;
