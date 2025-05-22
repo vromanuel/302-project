@@ -9,6 +9,7 @@ import WisdomBites.tracker.StudySession;
 import WisdomBites.tracker.StudySessionDAO;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
 import java.io.IOException;
 import WisdomBites.controller.SceneController;
@@ -27,7 +28,9 @@ public class HelloApplication extends Application {
         TaskDao taskDao = new TaskDao();
         StudySessionDAO studySessionDAO = new StudySessionDAO();
 
-        // Set fixed stage size ONCE
+        // Set window properties
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/WisdomBites/logo.png")));
+        stage.setTitle("Wisdom Bites"); // Set the app window title
         stage.setWidth(900);
         stage.setHeight(650);
         stage.setResizable(false); // Prevent resizing through the app
