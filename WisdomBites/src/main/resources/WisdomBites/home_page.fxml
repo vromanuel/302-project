@@ -28,29 +28,41 @@
     </HBox>
 
 
-    <VBox spacing="20" alignment="CENTER" StackPane.alignment="CENTER">
-        <Label fx:id="welcomeLabel" style="
+    <VBox spacing="30" alignment="CENTER" StackPane.alignment="CENTER">
+
+        <VBox spacing="5" alignment="CENTER">
+            <Label fx:id="welcomeLabel" style="
            -fx-text-fill: #5a3921;
-           -fx-font-size: 22px;
+           -fx-font-size: 28px;
            -fx-font-weight: bold;
            -fx-font-family: 'Segoe UI', monospace, monospace;
            -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0.5, 0, 1);
-           -fx-padding: 0 0 10 0;
+           -fx-padding: 0 0 5 0;
        "/>
+
+            <Label text="Let’s keep your learning streak alive :)"
+                   style="-fx-font-size: 16px;
+                  -fx-text-fill: #5a3921;
+                  -fx-font-family: 'Segoe UI', sans-serif;" />
+        </VBox>
 
         <!-- Top buttons -->
         <HBox spacing="20" alignment="CENTER">
             <Button fx:id="predictionsButton" text="Predictions"
+                    prefWidth="180"
                     style="-fx-background-color: #fdd28e;
+                    -fx-text-fill: #5a3921;
                     -fx-background-radius: 20;
-                    -fx-font-size: 16px;
+                    -fx-font-size: 18px;
                     "/>
 
             <Button fx:id="todoButton" text="To-Do-List"
+                    prefWidth="180"
                     style="
                     -fx-background-color: #fdd28e;
+                    -fx-text-fill: #5a3921;
                     -fx-background-radius: 20;
-                    -fx-font-size: 16px;
+                    -fx-font-size: 18px;
                     "/>
         </HBox>
 
@@ -59,32 +71,40 @@
 
         <!-- Get Your Fortune Button -->
         <Button fx:id="fortuneButton" text="Get your fortune"
+                prefWidth="180"
                 style="-fx-background-color: #fdd28e;
+                -fx-text-fill: #5a3921;
                 -fx-background-radius: 20;
-                -fx-font-size: 16px;
+                -fx-font-size: 18px;
                 "/>
 
         <!-- Bottom buttons -->
         <HBox spacing="30" alignment="CENTER">
             <Button fx:id="studyTrackerButton" text="My Progress"
+                    prefWidth="180"
                     style="
                     -fx-background-color: #fdd28e;
+                    -fx-text-fill: #5a3921;
                     -fx-background-radius: 20;
-                    -fx-font-size: 16px;
+                    -fx-font-size: 18px;
                     "/>
 
             <Button fx:id="challengesButton" text="Daily Challenges"
+                    prefWidth="180"
                     style="
                     -fx-background-color: #fdd28e;
+                    -fx-text-fill: #5a3921;
                     -fx-background-radius: 20;
-                    -fx-font-size: 16px;
+                    -fx-font-size: 18px;
                     "/>
 
             <Button fx:id="logOutButton" text="log out!"
+                    prefWidth="180"
                     style="
                     -fx-background-color: #fdd28e;
+                    -fx-text-fill: #5a3921;
                     -fx-background-radius: 20;
-                    -fx-font-size: 16px;
+                    -fx-font-size: 18px;
                     "/>
         </HBox>
 
