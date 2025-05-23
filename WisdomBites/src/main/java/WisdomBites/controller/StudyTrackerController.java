@@ -1,10 +1,10 @@
-
 package WisdomBites.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ProgressBar;
 
 public class StudyTrackerController {
 
@@ -22,57 +22,71 @@ public class StudyTrackerController {
     @FXML private TextField unitCode2;
     @FXML private TextField unitCode3;
 
-    // individual week fields for each unit (manually linked to FXML)
-    @FXML private TextField unit1Week1;
-    @FXML private TextField unit1Week2;
-    @FXML private TextField unit1Week3;
-    @FXML private TextField unit1Week4;
-    @FXML private TextField unit1Week5;
-    @FXML private TextField unit1Week6;
-    @FXML private TextField unit1Week7;
-    @FXML private TextField unit1Week8;
-    @FXML private TextField unit1Week9;
-    @FXML private TextField unit1Week10;
-    @FXML private TextField unit1Week11;
-    @FXML private TextField unit1Week12;
-    @FXML private TextField unit1Week13;
+    // Unit 1 week fields
+    @FXML private TextField unit1Weeks1, unit1Weeks2, unit1Weeks3, unit1Weeks4, unit1Weeks5,
+            unit1Weeks6, unit1Weeks7, unit1Weeks8, unit1Weeks9, unit1Weeks10,
+            unit1Weeks11, unit1Weeks12, unit1Weeks13;
 
-    @FXML private TextField unit2Week1;
-    @FXML private TextField unit2Week2;
-    @FXML private TextField unit2Week3;
-    @FXML private TextField unit2Week4;
-    @FXML private TextField unit2Week5;
-    @FXML private TextField unit2Week6;
-    @FXML private TextField unit2Week7;
-    @FXML private TextField unit2Week8;
-    @FXML private TextField unit2Week9;
-    @FXML private TextField unit2Week10;
-    @FXML private TextField unit2Week11;
-    @FXML private TextField unit2Week12;
-    @FXML private TextField unit2Week13;
+    // Unit 2 week fields
+    @FXML private TextField unit2Weeks1, unit2Weeks2, unit2Weeks3, unit2Weeks4, unit2Weeks5,
+            unit2Weeks6, unit2Weeks7, unit2Weeks8, unit2Weeks9, unit2Weeks10,
+            unit2Weeks11, unit2Weeks12, unit2Weeks13;
 
-    @FXML private TextField unit3Week1;
-    @FXML private TextField unit3Week2;
-    @FXML private TextField unit3Week3;
-    @FXML private TextField unit3Week4;
-    @FXML private TextField unit3Week5;
-    @FXML private TextField unit3Week6;
-    @FXML private TextField unit3Week7;
-    @FXML private TextField unit3Week8;
-    @FXML private TextField unit3Week9;
-    @FXML private TextField unit3Week10;
-    @FXML private TextField unit3Week11;
-    @FXML private TextField unit3Week12;
-    @FXML private TextField unit3Week13;
+    // Unit 3 week fields
+    @FXML private TextField unit3Weeks1, unit3Weeks2, unit3Weeks3, unit3Weeks4, unit3Weeks5,
+            unit3Weeks6, unit3Weeks7, unit3Weeks8, unit3Weeks9, unit3Weeks10,
+            unit3Weeks11, unit3Weeks12, unit3Weeks13;
+
+    // Progress bars
+    @FXML private ProgressBar unit1ProgressBar;
+    @FXML private ProgressBar unit2ProgressBar;
+    @FXML private ProgressBar unit3ProgressBar;
 
 
     @FXML
     public void initialize() {
-        // initialization logic (optional)
+        for (int i = 1; i <= 13; i++) {
+            addTextListener("unit1Weeks" + i);
+            addTextListener("unit2Weeks" + i);
+            addTextListener("unit3Weeks" + i);
+        }
+        updateProgressBars();
     }
+
+    private void addTextListener(String fieldName) {
+        try {
+            TextField field = (TextField) getClass().getDeclaredField(fieldName).get(this);
+            if (field != null) {
+                field.textProperty().addListener((obs, oldVal, newVal) -> updateProgressBars());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void updateProgressBars() {
+        unit1ProgressBar.setProgress(getFilledCount("unit1Weeks") / 13.0);
+        unit2ProgressBar.setProgress(getFilledCount("unit2Weeks") / 13.0);
+        unit3ProgressBar.setProgress(getFilledCount("unit3Weeks") / 13.0);
+    }
+
+    private int getFilledCount(String prefix) {
+        int count = 0;
+        for (int i = 1; i <= 13; i++) {
+            try {
+                TextField field = (TextField) getClass().getDeclaredField(prefix + i).get(this);
+                if (field != null && !field.getText().trim().isEmpty()) {
+                    count++;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return count;
+    }
+
     @FXML
     private void handleBack() {
         SceneController.switchScene("home_page.fxml");
     }
-
 }

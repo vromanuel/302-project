@@ -45,62 +45,105 @@
             <!-- Unit 1 -->
             <VBox spacing="8" GridPane.columnIndex="1">
                 <TextField fx:id="unitCode1" promptText="Enter Unit Code" style="-fx-font-weight: bold;"/>
+                <ProgressBar fx:id="unit1ProgressBar" prefWidth="200"/>
 
                 <VBox spacing="5">
-                    <HBox spacing="10"><Label text="W1" /><TextField fx:id="unit1Weeks1" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W2" /><TextField fx:id="unit1Weeks2" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W3" /><TextField fx:id="unit1Weeks3" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W4" /><TextField fx:id="unit1Weeks4" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W5" /><TextField fx:id="unit1Weeks5" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W6" /><TextField fx:id="unit1Weeks6" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W7" /><TextField fx:id="unit1Weeks7" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W8" /><TextField fx:id="unit1Weeks8" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W9" /><TextField fx:id="unit1Weeks9" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W10" /><TextField fx:id="unit1Weeks10" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W11" /><TextField fx:id="unit1Weeks11" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W12" /><TextField fx:id="unit1Weeks12" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W13" /><TextField fx:id="unit1Weeks13" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W1" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks1" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W2" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT" />
+                        <TextField fx:id="unit1Weeks2" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W3" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks3" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W4" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks4" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W5" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks5" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W6" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks6" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W7" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks7" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W8" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks8" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W9" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks9" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W10" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks10" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W11" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks11" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W12" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks12" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W13" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit1Weeks13" promptText="Task" /></HBox>
                 </VBox>
             </VBox>
 
             <!-- Unit 2 -->
             <VBox spacing="8" GridPane.columnIndex="2">
                 <TextField fx:id="unitCode2" promptText="Enter Unit Code" style="-fx-font-weight: bold;"/>
+                <ProgressBar fx:id="unit2ProgressBar" prefWidth="200"/>
 
                 <VBox spacing="5">
-                    <HBox spacing="10"><Label text="W1" /><TextField fx:id="unit2Weeks1" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W2" /><TextField fx:id="unit2Weeks2" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W3" /><TextField fx:id="unit2Weeks3" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W4" /><TextField fx:id="unit2Weeks4" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W5" /><TextField fx:id="unit2Weeks5" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W6" /><TextField fx:id="unit2Weeks6" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W7" /><TextField fx:id="unit2Weeks7" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W8" /><TextField fx:id="unit2Weeks8" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W9" /><TextField fx:id="unit2Weeks9" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W10" /><TextField fx:id="unit2Weeks10" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W11" /><TextField fx:id="unit2Weeks11" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W12" /><TextField fx:id="unit2Weeks12" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W13" /><TextField fx:id="unit2Weeks13" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W1" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks1" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W2" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks2" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W3" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks3" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W4" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks4" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W5" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks5" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W6" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks6" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W7" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks7" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W8" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks8" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W9" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks9" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W10" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks10" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W11" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks11" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W12" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks12" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W13" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit2Weeks13" promptText="Task" /></HBox>
                 </VBox>
             </VBox>
 
             <!-- Unit 3 -->
             <VBox spacing="8" GridPane.columnIndex="3">
                 <TextField fx:id="unitCode3" promptText="Enter Unit Code" style="-fx-font-weight: bold;"/>
+                <ProgressBar fx:id="unit3ProgressBar" prefWidth="200"/>
+
                 <VBox spacing="5">
-                    <HBox spacing="10"><Label text="W1" /><TextField fx:id="unit3Weeks1" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W2" /><TextField fx:id="unit3Weeks2" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W3" /><TextField fx:id="unit3Weeks3" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W4" /><TextField fx:id="unit3Weeks4" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W5" /><TextField fx:id="unit3Weeks5" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W6" /><TextField fx:id="unit3Weeks6" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W7" /><TextField fx:id="unit3Weeks7" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W8" /><TextField fx:id="unit3Weeks8" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W9" /><TextField fx:id="unit3Weeks9" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W10" /><TextField fx:id="unit3Weeks10" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W11" /><TextField fx:id="unit3Weeks11" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W12" /><TextField fx:id="unit3Weeks12" promptText="Task" /></HBox>
-                    <HBox spacing="10"><Label text="W13" /><TextField fx:id="unit3Weeks13" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W1" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT" />
+                        <TextField fx:id="unit3Weeks1" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W2" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks2" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W3" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks3" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W4" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks4" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W5" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks5" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W6" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks6" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W7" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks7" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W8" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks8" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W9" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks9" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W10" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks10" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W11" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks11" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W12" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks12" promptText="Task" /></HBox>
+                    <HBox spacing="10"><Label text="W13" minWidth="40" maxWidth="40" alignment="CENTER_RIGHT"/>
+                        <TextField fx:id="unit3Weeks13" promptText="Task" /></HBox>
                 </VBox>
             </VBox>
 

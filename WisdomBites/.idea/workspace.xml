@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="added back button to get your cookie page">
+    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="added changes to study tracker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/StudyTrackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/StudyTrackerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/WisdomBites/StudyTracker.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/StudyTracker.fxml" afterDir="false" />
@@ -250,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747962037505</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added changes to study tracker">
+      <option name="closed" value="true" />
+      <created>1747980127744</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747980127744</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -263,6 +271,7 @@
     <MESSAGE value="made the app look visually better" />
     <MESSAGE value="added fortune cookie button functionality" />
     <MESSAGE value="added back button to get your cookie page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added back button to get your cookie page" />
+    <MESSAGE value="added changes to study tracker" />
+    <option name="LAST_COMMIT_MESSAGE" value="added changes to study tracker" />
   </component>
 </project>
