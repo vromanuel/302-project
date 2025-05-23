@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="made the app look visually better">
+    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="added back button to get your cookie page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/FortuneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/FortuneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/WisdomBites/create_task.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/create_task.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/WisdomBites/fortune_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/fortune_view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/StudyTrackerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WisdomBites/controller/StudyTrackerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/WisdomBites/StudyTracker.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/WisdomBites/StudyTracker.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747907605281</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added back button to get your cookie page">
+      <option name="closed" value="true" />
+      <created>1747962037505</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747962037505</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -255,6 +262,7 @@
     <MESSAGE value="changed the placement of date and time" />
     <MESSAGE value="made the app look visually better" />
     <MESSAGE value="added fortune cookie button functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fortune cookie button functionality" />
+    <MESSAGE value="added back button to get your cookie page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added back button to get your cookie page" />
   </component>
 </project>
