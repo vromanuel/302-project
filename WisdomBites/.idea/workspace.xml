@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="added changes to study tracker" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vromanuel&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vromanuel/302-project.git&quot;,
+    &quot;accountId&quot;: &quot;ce1bab23-13eb-405c-a05f-bb2fbe71cf0e&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2vwrgm0O4MELnFf2TxjEQBCgKNA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Fortuneapp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.study_tracker.executor&quot;: &quot;Run&quot;,
+    &quot;Application.studytracker.executor&quot;: &quot;Run&quot;,
+    &quot;Application.testStudySessionDAO.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Fortune_cookie_pages in javafx-reading-demo.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Manny/Github/302-project-ting/WisdomBites&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kimia\OneDrive\Documents\GitHub\302-project\ForkedRepos\302-project\WisdomBites\src\main\resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/WisdomBites" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Fortuneapp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Fortune_cookie_pages.Fortuneapp" />
+      <module name="javafx-reading-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WisdomBites.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="WisdomBites.Main.Main" />
+      <module name="javafx-reading-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WisdomBites.Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="study_tracker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study_tracker.study_tracker" />
+      <module name="javafx-reading-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="studytrackerapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="studytracker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="studytrackerapp.studytracker" />
+      <module name="javafx-reading-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="studytrackerapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Fortune_cookie_pages in javafx-reading-demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javafx-reading-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WisdomBites.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Fortune_cookie_pages" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Fortuneapp" />
+        <item itemvalue="Application.studytracker" />
+        <item itemvalue="Application.study_tracker" />
+        <item itemvalue="JUnit.Fortune_cookie_pages in javafx-reading-demo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="" />
+      <created>1745067091247</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745067091247</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add logo to the login page">
+      <option name="closed" value="true" />
+      <created>1747835244793</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747835244793</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add logo to the login page">
+      <option name="closed" value="true" />
+      <created>1747835668956</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747835668956</updated>
+    </task>
+    <task id="LOCAL-00003" summary="make the login page smaller">
+      <option name="closed" value="true" />
+      <created>1747837296986</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747837296986</updated>
+    </task>
+    <task id="LOCAL-00004" summary="make the home page smaller">
+      <option name="closed" value="true" />
+      <created>1747837916574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747837916574</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added the app name to the window title">
+      <option name="closed" value="true" />
+      <created>1747902847587</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747902847587</updated>
+    </task>
+    <task id="LOCAL-00006" summary="made a small change in one of the buttons">
+      <option name="closed" value="true" />
+      <created>1747903799157</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747903799157</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changed the placement of date and time">
+      <option name="closed" value="true" />
+      <created>1747905694364</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747905694364</updated>
+    </task>
+    <task id="LOCAL-00008" summary="made the app look visually better">
+      <option name="closed" value="true" />
+      <created>1747907042639</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747907042639</updated>
+    </task>
+    <task id="LOCAL-00009" summary="made the app look visually better">
+      <option name="closed" value="true" />
+      <created>1747907605281</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747907605281</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added back button to get your cookie page">
+      <option name="closed" value="true" />
+      <created>1747962037505</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747962037505</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added changes to study tracker">
+      <option name="closed" value="true" />
+      <created>1747980127744</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747980127744</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added changes to study tracker">
+      <option name="closed" value="true" />
+      <created>1748002751215</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748002751215</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add logo to the login page" />
+    <MESSAGE value="make the login page smaller" />
+    <MESSAGE value="make the home page smaller" />
+    <MESSAGE value="added the app name to the window title" />
+    <MESSAGE value="made a small change in one of the buttons" />
+    <MESSAGE value="changed the placement of date and time" />
+    <MESSAGE value="made the app look visually better" />
+    <MESSAGE value="added fortune cookie button functionality" />
+    <MESSAGE value="added back button to get your cookie page" />
+    <MESSAGE value="added changes to study tracker" />
+    <option name="LAST_COMMIT_MESSAGE" value="added changes to study tracker" />
+  </component>
+</project>
