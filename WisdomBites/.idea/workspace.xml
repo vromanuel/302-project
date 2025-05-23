@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="added changes to study tracker">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a978e558-2425-43f1-8696-9a43862c7688" name="Changes" comment="added changes to study tracker" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +97,8 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="WisdomBites.Main" />
+      <option name="MAIN_CLASS_NAME" value="WisdomBites.Main.Main" />
+      <module name="javafx-reading-demo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="WisdomBites.Main.*" />
