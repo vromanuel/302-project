@@ -5,7 +5,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.geometry.*?>
 
-
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="WisdomBites.controller.FortuneController"
             prefWidth="900" prefHeight="650"
@@ -13,11 +12,43 @@
 
     <center>
         <VBox alignment="CENTER" spacing="20">
-            <ImageView fx:id="cookieImage" fitWidth="200" preserveRatio="true"/>
-            <Label fx:id="fortuneText" wrapText="true" style="-fx-font-size: 18; -fx-text-fill: #5a3921;" />
+            <padding>
+                <Insets top="60"/>
+            </padding>
+
+            <!-- Page Title -->
+            <Label text="Your Daily Fortune"
+                   style="-fx-font-size: 28px; -fx-text-fill: #5a3921; -fx-font-weight: bold;" />
+
+            <!-- Subtitle -->
+            <Label fx:id="subtitleText" text="Here’s your message:"
+                   visible="false"
+                   style="-fx-font-size: 16px; -fx-text-fill: #5a3921; -fx-font-style: italic;" />
+
+            <!-- Fortune Cookie Image -->
+            <ImageView fx:id="cookieImage" fitWidth="220" preserveRatio="true"/>
+
+            <!-- Fortune Text -->
+            <Label fx:id="fortuneText" wrapText="true"
+                   maxWidth="500"
+                   style="-fx-font-size: 18; -fx-text-fill: #5a3921; -fx-alignment: center;" />
+
+            <!-- Crack Button -->
             <Button fx:id="crackButton" onAction="#handleCrack"
                     text="Crack open your cookie"
-                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px;" />
+                    style="-fx-background-color: #fdd28e;
+                           -fx-background-radius: 25;
+                           -fx-font-size: 18px;
+                           -fx-padding: 10 20;" />
+
+            <!-- Back to Home -->
+            <Button text="← Back to Home"
+                    onAction="#goHome"
+                    style="-fx-background-color: transparent;
+                           -fx-text-fill: #5a3921;
+                           -fx-underline: true;
+                           -fx-font-size: 14;
+                           -fx-cursor: hand;" />
         </VBox>
     </center>
 </BorderPane>

@@ -10,11 +10,14 @@ import java.util.List;
 import java.util.Random;
 
 public class FortuneController {
+
     @FXML private ImageView cookieImage;
     @FXML private Label fortuneText;
+    @FXML private Label subtitleText;
     @FXML private Button crackButton;
 
     private boolean isCracked = false;
+
     private final List<String> fortunes = List.of(
             "You will conquer challenges with grace.",
             "Today is a perfect day to learn something new.",
@@ -30,7 +33,8 @@ public class FortuneController {
     @FXML
     public void initialize() {
         cookieImage.setImage(closedCookie);
-        fortuneText.setText("");  // Empty initially
+        fortuneText.setText("");
+        subtitleText.setVisible(false); // Hide subtitle initially
     }
 
     @FXML
@@ -39,14 +43,20 @@ public class FortuneController {
             cookieImage.setImage(openCookie);
             fortuneText.setText(getRandomFortune());
             crackButton.setText("Crack another one");
+            subtitleText.setVisible(true); // Show subtitle when cracked
             isCracked = true;
         } else {
-            // Reset and show a new one
             cookieImage.setImage(closedCookie);
             fortuneText.setText("");
             crackButton.setText("Crack open your cookie");
+            subtitleText.setVisible(false);
             isCracked = false;
         }
+    }
+
+    @FXML
+    public void goHome() {
+        SceneController.switchScene("home_page.fxml");
     }
 
     private String getRandomFortune() {
