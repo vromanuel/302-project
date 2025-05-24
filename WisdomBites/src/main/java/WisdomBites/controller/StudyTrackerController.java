@@ -1,92 +1,261 @@
 package WisdomBites.controller;
 
+import WisdomBites.model.Unit;
+import WisdomBites.model.UnitDAO;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ProgressBar;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+
+import java.util.List;
+import java.util.Map;
 
 public class StudyTrackerController {
 
+
     @FXML private Button backButton;
+    @FXML private Button saveButton;
+    @FXML private Button loadButton;
+    @FXML private Button clearAllButton;
+    @FXML private Label statusLabel;
 
-    // Daily Check-In checkboxes
-    @FXML private CheckBox mondayCheck;
-    @FXML private CheckBox tuesdayCheck;
-    @FXML private CheckBox wednesdayCheck;
-    @FXML private CheckBox thursdayCheck;
-    @FXML private CheckBox fridayCheck;
+    @FXML private TextField unitName1;
+    @FXML private TextField unitName2;
+    @FXML private TextField unitName3;
+    @FXML private TextField unitName4;
 
-    // unit code input fields
-    @FXML private TextField unitCode1;
-    @FXML private TextField unitCode2;
-    @FXML private TextField unitCode3;
 
-    // Unit 1 week fields
-    @FXML private TextField unit1Weeks1, unit1Weeks2, unit1Weeks3, unit1Weeks4, unit1Weeks5,
-            unit1Weeks6, unit1Weeks7, unit1Weeks8, unit1Weeks9, unit1Weeks10,
-            unit1Weeks11, unit1Weeks12, unit1Weeks13;
+    @FXML private ProgressBar progressBar1;
+    @FXML private ProgressBar progressBar2;
+    @FXML private ProgressBar progressBar3;
+    @FXML private ProgressBar progressBar4;
 
-    // Unit 2 week fields
-    @FXML private TextField unit2Weeks1, unit2Weeks2, unit2Weeks3, unit2Weeks4, unit2Weeks5,
-            unit2Weeks6, unit2Weeks7, unit2Weeks8, unit2Weeks9, unit2Weeks10,
-            unit2Weeks11, unit2Weeks12, unit2Weeks13;
+    @FXML private GridPane weeksGrid;
 
-    // Unit 3 week fields
-    @FXML private TextField unit3Weeks1, unit3Weeks2, unit3Weeks3, unit3Weeks4, unit3Weeks5,
-            unit3Weeks6, unit3Weeks7, unit3Weeks8, unit3Weeks9, unit3Weeks10,
-            unit3Weeks11, unit3Weeks12, unit3Weeks13;
-
-    // Progress bars
-    @FXML private ProgressBar unit1ProgressBar;
-    @FXML private ProgressBar unit2ProgressBar;
-    @FXML private ProgressBar unit3ProgressBar;
-
+    private TextField[][] weekFields = new TextField[4][13];
+    private String[] loadedUnitNames = new String[4];
+    private UnitDAO unitDao;
 
     @FXML
     public void initialize() {
-        for (int i = 1; i <= 13; i++) {
-            addTextListener("unit1Weeks" + i);
-            addTextListener("unit2Weeks" + i);
-            addTextListener("unit3Weeks" + i);
+        unitDao = new UnitDAO();
+        setupWeekFields();
+        disableAllWeekFields();
+    }
+
+    private void setupWeekFields() {
+        for (int unit = 0; unit < 4; unit++) {
+            for (int week = 0; week < 13; week++) {
+                String fieldId = "unit" + (unit+1) + "Week" + (week+1);
+                try {
+                    weekFields[unit][week] = (TextField) weeksGrid.lookup("#" + fieldId);
+                    if (weekFields[unit][week] != null) {
+                        weekFields[unit][week].textProperty().addListener((obs, oldVal, newVal) -> {
+                            updateProgressBars();
+                        });
+                    }
+                } catch (Exception e) {
+                    System.err.println("Couldn't find field: " + fieldId);
+                }
+            }
+        }
+    }
+
+    private void disableAllWeekFields() {
+        for (int unit = 1; unit <= 4; unit++) {
+            for (int week = 1; week <= 13; week++) {
+                TextField field = getWeekField(unit, week);
+                if (field != null) {
+                    field.setDisable(true);
+                    field.setStyle("-fx-opacity: 0.7;");
+                }
+            }
+            getProgressBar(unit).setVisible(false);
+        }
+    }
+
+    @FXML
+    private void handleLoad(ActionEvent event) {
+        for (int unitNum = 1; unitNum <= 4; unitNum++) {
+            TextField nameField = getUnitNameField(unitNum);
+            String unitName = nameField.getText().trim();
+
+            if (!unitName.isEmpty()) {
+                loadUnitData(unitNum, unitName);
+
+                nameField.setDisable(true);
+                nameField.setStyle("-fx-opacity: 0.9; -fx-font-weight: bold;");
+            } else {
+                clearUnit(unitNum);
+            }
         }
         updateProgressBars();
     }
 
-    private void addTextListener(String fieldName) {
-        try {
-            TextField field = (TextField) getClass().getDeclaredField(fieldName).get(this);
-            if (field != null) {
-                field.textProperty().addListener((obs, oldVal, newVal) -> updateProgressBars());
+    private void loadUnitData(int unitNum, String unitName) {
+        List<Unit> units = unitDao.getUnitsByName(StateController.currentUser.getId(), unitName);
+
+        if (units.isEmpty()) {
+
+            enableUnitWeeks(unitNum);
+            loadedUnitNames[unitNum-1] = unitName;
+            showStatus("New unit '" + unitName + "' ready for input", false);
+        } else {
+            // Existing unit - load data
+            for (Unit unit : units) {
+                TextField weekField = getWeekField(unitNum, unit.getWeekNumber());
+                if (weekField != null) {
+                    weekField.setText(unit.getTaskDescription());
+                    weekField.setDisable(false);
+                    weekField.setStyle(unit.isCompleted() ?
+                            "-fx-background-color: #e6ffe6;" : "");
+                }
             }
+            loadedUnitNames[unitNum-1] = unitName;
+            getProgressBar(unitNum).setVisible(true);
+            showStatus("Loaded unit '" + unitName + "'", false);
+        }
+    }
+
+    private void enableUnitWeeks(int unitNum) {
+        for (int week = 1; week <= 13; week++) {
+            TextField field = getWeekField(unitNum, week);
+            if (field != null) {
+                field.setDisable(false);
+                field.setStyle("");
+                field.clear();
+            }
+        }
+        getProgressBar(unitNum).setVisible(true);
+    }
+
+    @FXML
+    private void handleClearAll(ActionEvent event) {
+        clearAllFields();
+        showStatus("All fields cleared", false);
+    }
+
+    private void clearUnit(int unitNum) {
+        TextField nameField = getUnitNameField(unitNum);
+        nameField.clear();
+        nameField.setDisable(false);
+        nameField.setStyle("");
+
+        for (int week = 1; week <= 13; week++) {
+            TextField field = getWeekField(unitNum, week);
+            if (field != null) {
+                field.clear();
+                field.setDisable(true);
+                field.setStyle("-fx-opacity: 0.7;");
+            }
+        }
+        getProgressBar(unitNum).setVisible(false);
+        loadedUnitNames[unitNum-1] = null;
+    }
+
+    private void clearAllFields() {
+        unitName1.clear(); unitName1.setDisable(false); unitName1.setStyle("");
+        unitName2.clear(); unitName2.setDisable(false); unitName2.setStyle("");
+        unitName3.clear(); unitName3.setDisable(false); unitName3.setStyle("");
+        unitName4.clear(); unitName4.setDisable(false); unitName4.setStyle("");
+
+        for (int unit = 0; unit < 4; unit++) {
+            for (int week = 0; week < 13; week++) {
+                if (weekFields[unit][week] != null) {
+                    weekFields[unit][week].clear();
+                    weekFields[unit][week].setDisable(true);
+                    weekFields[unit][week].setStyle("-fx-opacity: 0.7;");
+                }
+            }
+            getProgressBar(unit+1).setVisible(false);
+            loadedUnitNames[unit] = null;
+        }
+    }
+
+    @FXML
+    private void handleSave(ActionEvent event) {
+        try {
+            for (int unitNum = 1; unitNum <= 4; unitNum++) {
+                String unitName = loadedUnitNames[unitNum-1];
+                if (unitName == null || unitName.isEmpty()) continue;
+
+                for (int week = 1; week <= 13; week++) {
+                    TextField taskField = getWeekField(unitNum, week);
+                    if (taskField != null) {
+                        String taskText = taskField.getText().trim();
+                        boolean completed = !taskText.isEmpty();
+
+                        unitDao.saveUnit(
+                                StateController.currentUser.getId(),
+                                unitName,
+                                week,
+                                taskText,
+                                completed
+                        );
+                    }
+                }
+            }
+            showStatus("All changes saved!", false);
         } catch (Exception e) {
+            showStatus("Error saving data!", true);
             e.printStackTrace();
         }
     }
 
-    private void updateProgressBars() {
-        unit1ProgressBar.setProgress(getFilledCount("unit1Weeks") / 13.0);
-        unit2ProgressBar.setProgress(getFilledCount("unit2Weeks") / 13.0);
-        unit3ProgressBar.setProgress(getFilledCount("unit3Weeks") / 13.0);
+    @FXML
+    private void handleBack(ActionEvent event) {
+        SceneController.switchScene("home_page.fxml");
     }
 
-    private int getFilledCount(String prefix) {
-        int count = 0;
-        for (int i = 1; i <= 13; i++) {
-            try {
-                TextField field = (TextField) getClass().getDeclaredField(prefix + i).get(this);
-                if (field != null && !field.getText().trim().isEmpty()) {
-                    count++;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
+    private void updateProgressBars() {
+        for (int unit = 1; unit <= 4; unit++) {
+            getProgressBar(unit).setProgress(getCompletionPercentage(unit));
+            getProgressBar(unit).setVisible(loadedUnitNames[unit-1] != null);
+        }
+    }
+
+    private double getCompletionPercentage(int unitNum) {
+        if (unitNum < 1 || unitNum > 4) return 0;
+
+        int completed = 0;
+        for (int week = 1; week <= 13; week++) {
+            TextField field = getWeekField(unitNum, week);
+            if (field != null && !field.getText().trim().isEmpty()) {
+                completed++;
             }
         }
-        return count;
+        return completed / 13.0;
     }
 
-    @FXML
-    private void handleBack() {
-        SceneController.switchScene("home_page.fxml");
+    private TextField getWeekField(int unitNum, int week) {
+        if (unitNum < 1 || unitNum > 4 || week < 1 || week > 13) {
+            return null;
+        }
+        return weekFields[unitNum-1][week-1];
+    }
+
+    private TextField getUnitNameField(int unitNum) {
+        switch (unitNum) {
+            case 1: return unitName1;
+            case 2: return unitName2;
+            case 3: return unitName3;
+            case 4: return unitName4;
+            default: return null;
+        }
+    }
+
+    private ProgressBar getProgressBar(int unitNum) {
+        switch (unitNum) {
+            case 1: return progressBar1;
+            case 2: return progressBar2;
+            case 3: return progressBar3;
+            case 4: return progressBar4;
+            default: return null;
+        }
+    }
+
+    private void showStatus(String message, boolean isError) {
+        statusLabel.setText(message);
+        statusLabel.setStyle(isError ? "-fx-text-fill: red;" : "-fx-text-fill: green;");
     }
 }
