@@ -28,6 +28,7 @@ public class HelloApplication extends Application {
         TaskDao taskDao = new TaskDao();
         StudySessionDAO studySessionDAO = new StudySessionDAO();
 
+
         // Set window properties
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/WisdomBites/logo.png")));
         stage.setTitle("Wisdom Bites"); // Set the app window title

@@ -11,48 +11,76 @@ import java.util.List;
 import java.util.Map;
 
 public class StudyTrackerController {
-    //
+
+
+    // Back button takes the user back to the home page
     @FXML private Button backButton;
-    @FXML private Button saveButton;
+
+    // saves the information about every code into
     @FXML private Button loadButton;
+
+    // clears all the textboxes and
     @FXML private Button clearAllButton;
-    @FXML private Label statusLabel;
 
-    @FXML private TextField unitName1;
-    @FXML private TextField unitName2;
-    @FXML private TextField unitName3;
-    @FXML private TextField unitName4;
+    // Text fields so the users can enter the name of the classes that they want to track
+    @FXML private TextField unitCode1;
+    @FXML private TextField unitCode2;
+    @FXML private TextField unitCode3;
+    @FXML private TextField unitCode4;
 
-
+    // progress bars which show the progress of each course entered by the user (percentage of weeks which have tasks entered and saved)
     @FXML private ProgressBar progressBar1;
     @FXML private ProgressBar progressBar2;
     @FXML private ProgressBar progressBar3;
     @FXML private ProgressBar progressBar4;
 
+    // grid to organise the weeks of each course
     @FXML private GridPane weeksGrid;
 
+    // a two-dimensional array of text fields to hold the textfields of 4 units of 13 weeks each
     private TextField[][] weekFields = new TextField[4][13];
-    private String[] loadedUnitNames = new String[4];
+
+    // an array to store the names of the
+    private String[] unitNamesEntered = new String[4];
+
+    // The unit data access object to enable the functions to make changes to the unit table in the database
     private UnitDAO unitDao;
+
 
     @FXML
     public void initialize() {
+        // Create a new instance of the unitDAO class, and set the variable declared earlier to the new object
         unitDao = new UnitDAO();
+
+        // Adds listeners to the text fields for each week, sets the values in the weekField array to their respective week's text field
         setupWeekFields();
-        disableAllWeekFields();
+
+        // disable the text fields for each week because the user hasn't yet entered in
+        disableWeekFields();
     }
 
     private void setupWeekFields() {
+        // a loop which iterates through the units
         for (int unit = 0; unit < 4; unit++) {
+
+            // a nested loop which iterates through the weeks
             for (int week = 0; week < 13; week++) {
-                String fieldId = "unit" + (unit+1) + "Week" + (week+1);
+
+                // Creates a week field with the number of the unit and week relative to in the UI
+                int unitInField = unit + 1;
+                int weekInField = week + 1;
+                String fieldId = "unit" + unitInField + "Week" + weekInField;
+
+                // Attempt to set an element in the weekFields array to 
                 try {
                     weekFields[unit][week] = (TextField) weeksGrid.lookup("#" + fieldId);
                     if (weekFields[unit][week] != null) {
                         weekFields[unit][week].textProperty().addListener((obs, oldVal, newVal) -> {
                             updateProgressBars();
                         });
+
                     }
+
                 } catch (Exception e) {
                     System.err.println("Couldn't find field: " + fieldId);
                 }
@@ -60,7 +88,7 @@ public class StudyTrackerController {
         }
     }
 
-    private void disableAllWeekFields() {
+    private void disableWeekFields() {
         for (int unit = 1; unit <= 4; unit++) {
             for (int week = 1; week <= 13; week++) {
                 TextField field = getWeekField(unit, week);
@@ -77,15 +105,18 @@ public class StudyTrackerController {
     private void handleLoad(ActionEvent event) {
         for (int unitNum = 1; unitNum <= 4; unitNum++) {
             TextField nameField = getUnitNameField(unitNum);
-            String unitName = nameField.getText().trim();
+            // Add null check before accessing nameField
+            if (nameField != null) {
+                String unitName = nameField.getText().trim();
 
-            if (!unitName.isEmpty()) {
-                loadUnitData(unitNum, unitName);
+                if (!unitName.isEmpty()) {
+                    loadUnitData(unitNum, unitName);
 
-                nameField.setDisable(true);
-                nameField.setStyle("-fx-opacity: 0.9; -fx-font-weight: bold;");
-            } else {
-                clearUnit(unitNum);
+                    nameField.setDisable(true);
+                    nameField.setStyle("-fx-opacity: 0.9; -fx-font-weight: bold;");
+                } else {
+                    clearUnit(unitNum);
+                }
             }
         }
         updateProgressBars();
@@ -97,8 +128,8 @@ public class StudyTrackerController {
         if (units.isEmpty()) {
 
             enableUnitWeeks(unitNum);
-            loadedUnitNames[unitNum-1] = unitName;
-            showStatus("New unit '" + unitName + "' ready for input", false);
+            unitNamesEntered[unitNum-1] = unitName;
+
         } else {
             // Existing unit - load data
             for (Unit unit : units) {
@@ -110,9 +141,9 @@ public class StudyTrackerController {
                             "-fx-background-color: #e6ffe6;" : "");
                 }
             }
-            loadedUnitNames[unitNum-1] = unitName;
+            unitNamesEntered[unitNum-1] = unitName;
             getProgressBar(unitNum).setVisible(true);
-            showStatus("Loaded unit '" + unitName + "'", false);
+
         }
     }
 
@@ -131,7 +162,7 @@ public class StudyTrackerController {
     @FXML
     private void handleClearAll(ActionEvent event) {
         clearAllFields();
-        showStatus("All fields cleared", false);
+
     }
 
     private void clearUnit(int unitNum) {
@@ -149,14 +180,14 @@ public class StudyTrackerController {
             }
         }
         getProgressBar(unitNum).setVisible(false);
-        loadedUnitNames[unitNum-1] = null;
+        unitNamesEntered[unitNum-1] = null;
     }
 
     private void clearAllFields() {
-        unitName1.clear(); unitName1.setDisable(false); unitName1.setStyle("");
-        unitName2.clear(); unitName2.setDisable(false); unitName2.setStyle("");
-        unitName3.clear(); unitName3.setDisable(false); unitName3.setStyle("");
-        unitName4.clear(); unitName4.setDisable(false); unitName4.setStyle("");
+        unitCode1.clear(); unitCode1.setDisable(false); unitCode1.setStyle("");
+        unitCode2.clear(); unitCode2.setDisable(false); unitCode2.setStyle("");
+        unitCode3.clear(); unitCode3.setDisable(false); unitCode3.setStyle("");
+        unitCode4.clear(); unitCode4.setDisable(false); unitCode4.setStyle("");
 
         for (int unit = 0; unit < 4; unit++) {
             for (int week = 0; week < 13; week++) {
@@ -167,7 +198,7 @@ public class StudyTrackerController {
                 }
             }
             getProgressBar(unit+1).setVisible(false);
-            loadedUnitNames[unit] = null;
+            unitNamesEntered[unit] = null;
         }
     }
 
@@ -175,7 +206,7 @@ public class StudyTrackerController {
     private void handleSave(ActionEvent event) {
         try {
             for (int unitNum = 1; unitNum <= 4; unitNum++) {
-                String unitName = loadedUnitNames[unitNum-1];
+                String unitName = unitNamesEntered[unitNum-1];
                 if (unitName == null || unitName.isEmpty()) continue;
 
                 for (int week = 1; week <= 13; week++) {
@@ -194,9 +225,9 @@ public class StudyTrackerController {
                     }
                 }
             }
-            showStatus("All changes saved!", false);
+
         } catch (Exception e) {
-            showStatus("Error saving data!", true);
+
             e.printStackTrace();
         }
     }
@@ -209,7 +240,7 @@ public class StudyTrackerController {
     private void updateProgressBars() {
         for (int unit = 1; unit <= 4; unit++) {
             getProgressBar(unit).setProgress(getCompletionPercentage(unit));
-            getProgressBar(unit).setVisible(loadedUnitNames[unit-1] != null);
+            getProgressBar(unit).setVisible(unitNamesEntered[unit-1] != null);
         }
     }
 
@@ -235,10 +266,10 @@ public class StudyTrackerController {
 
     private TextField getUnitNameField(int unitNum) {
         switch (unitNum) {
-            case 1: return unitName1;
-            case 2: return unitName2;
-            case 3: return unitName3;
-            case 4: return unitName4;
+            case 1: return unitCode1;
+            case 2: return unitCode2;
+            case 3: return unitCode3;
+            case 4: return unitCode4;
             default: return null;
         }
     }
@@ -253,8 +284,5 @@ public class StudyTrackerController {
         }
     }
 
-    private void showStatus(String message, boolean isError) {
-        statusLabel.setText(message);
-        statusLabel.setStyle(isError ? "-fx-text-fill: red;" : "-fx-text-fill: green;");
-    }
+
 }

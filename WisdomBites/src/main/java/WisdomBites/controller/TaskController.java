@@ -31,7 +31,7 @@ public class TaskController {
     public void initialize() {
         loadTasks();
 
-        // Setup back button action
+
         backButton.setOnAction(e -> {
             SceneController.switchScene("home_page.fxml");
         });
@@ -46,7 +46,7 @@ public class TaskController {
             TaskDao.addTask(title, desc, "F");
             titleField.clear();
             descriptionField.clear();
-            loadTasks(); // refresh list
+            loadTasks();
         }
     }
 
