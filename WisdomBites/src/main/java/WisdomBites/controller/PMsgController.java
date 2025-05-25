@@ -29,12 +29,14 @@ public class PMsgController {
         );
     }
 
-    public static String generatePrediction(String subject, int weeksStudied) {
+    public static String generatePrediction(String name, String subject, int weeksStudied) {
         String prompt = String.format(
-                "Create a progress prediction for someone who has studied %s for %d weeks. " +
-                        "Provide a motivational 1-sentence assessment of their progress and future potential. " +
-                        "Be specific about the subject and time frame.",
-                subject, weeksStudied
+                "Create a short progress prediction for %s who has studied %s for %d weeks. " +
+                        "Use second person ('you') and speak directly to them. Avoid repeating their name. " +
+                        "Give a warm, encouraging assessment of their current progress and future potential. " +
+                        "Respond naturally, without any quotation marks." +
+                        "Be specific about the subject and time frame. ",
+                name, subject, weeksStudied
         );
 
         return getAIResponse(prompt,
