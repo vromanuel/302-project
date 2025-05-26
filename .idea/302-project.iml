@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/javafx-reading-demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/javafx-reading-demo/src/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/javafx-reading-demo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/WisdomBites" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
