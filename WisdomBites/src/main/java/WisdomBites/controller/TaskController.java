@@ -141,7 +141,8 @@ public class TaskController {
                     TaskDao.completeTask(task.getId());
                     loadTasks();
                 }
-            });
+            }
+            );
 
             taskBox.getChildren().addAll(topRow, descLabel, dateCreatedLabel);
             taskListContainer.getChildren().add(taskBox);

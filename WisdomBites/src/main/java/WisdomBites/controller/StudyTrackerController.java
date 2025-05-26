@@ -291,6 +291,7 @@ public class StudyTrackerController {
                 // disable and clear the fields for the weeks
                 if (weekFields[unit][week] != null) {
                     weekFields[unit][week].clear();
+
                     weekFields[unit][week].setDisable(true);
                     weekFields[unit][week].setStyle("-fx-opacity: 0.7;");
                 }
@@ -388,7 +389,7 @@ public class StudyTrackerController {
                 completed += 1;
             }
         }
-        // divide the number of weeks by 13
+        // divide the number of weeks by 13 to get percentage
         return completed / 13.0;
     }
 

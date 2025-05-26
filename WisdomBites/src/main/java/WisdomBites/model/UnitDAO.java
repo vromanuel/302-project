@@ -18,6 +18,7 @@ public class UnitDAO {
 
     private void createStudyUnitTable() {
         try {
+            // create the unit table if it does not yet exist
             Statement statement = connection.createStatement();
 
             String query = "CREATE TABLE IF NOT EXISTS study_units (" +
@@ -40,28 +41,34 @@ public class UnitDAO {
     }
 
     public List<Unit> getUnitsByName(int userId, String unitName) {
-
+        // units
         List<Unit> units = new ArrayList<>();
 
-        try {
 
-            String sql = "SELECT * FROM study_units WHERE " +
+        try {
+            // query to return the record for units
+            String query = "SELECT * FROM study_units WHERE " +
                     "userId = ? AND " +
                     "unitName = ? ORDER BY weekNumber";
-            PreparedStatement statement = connection.prepareStatement(sql);
 
+            // create prepared statement
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            // modify prepared statement
             statement.setInt(1, userId);
             statement.setString(2, unitName);
 
-            ResultSet rs = statement.executeQuery();
+            // 
+            ResultSet results = statement.executeQuery();
 
-            while (rs.next()) {
+            while (results.next()) {
                 units.add(new Unit(
-                        rs.getInt("userId"),
-                        rs.getString("unitName"),
-                        rs.getInt("weekNumber"),
-                        rs.getString("taskDescription"),
-                        rs.getString("completed")
+
+                        results.getInt("userId"),
+                        results.getString("unitName"),
+                        results.getInt("weekNumber"),
+                        results.getString("taskDescription"),
+                        results.getString("completed")
                 ));
             }
         } catch (SQLException e) {
