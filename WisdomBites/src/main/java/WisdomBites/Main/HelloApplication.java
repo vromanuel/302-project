@@ -28,14 +28,6 @@ public class HelloApplication extends Application {
         TaskDao taskDao = new TaskDao();
         StudySessionDAO studySessionDAO = new StudySessionDAO();
 
-        var logoURL = getClass().getResource("/WisdomBites/logo.png");
-        System.out.println("Logo resource URL: " + logoURL);  // Debug line
-
-        if (logoURL != null) {
-            stage.getIcons().add(new Image(logoURL.toString()));
-        } else {
-            System.err.println("⚠ ERROR: Logo not found at /WisdomBites/logo.png");
-        }
 
         // Set window properties
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/WisdomBites/logo.png")));

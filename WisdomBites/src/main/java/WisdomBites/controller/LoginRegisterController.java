@@ -27,9 +27,11 @@ import java.io.IOException;
 
 public class LoginRegisterController {
 
+    // fxml elements
     @FXML private ImageView logoImage;
     @FXML private TextField loginEmailField;
     @FXML private TextField loginPassWordField;
+
     @FXML private TextField firstNameField;
     @FXML private TextField lastNameField;
 
@@ -46,9 +48,12 @@ public class LoginRegisterController {
 
     @FXML
     public void loginButtonHandle() {
+
+        // get the user input from email and password text fields
         String email = loginEmailField.getText();
         String passWord = loginPassWordField.getText();
 
+        // if one of them is empty, cannot login, cant have blank password or username
         if (email.isEmpty() || passWord.isEmpty())
         {
             loginStatusLabel.setText("Registration unsuccessful! Fields must not be left blank");
@@ -56,15 +61,21 @@ public class LoginRegisterController {
             return;
         }
 
+        // get the user by finding one that fits the credentials
         User user = UserDao.login(email, passWord);
+
         StateController.setCurrentUser(user);
 
+        // if the user exists in records, show the reader, and take them to their home page
         if(user != null) {
             loginStatusLabel.setText("Registration successful! you have logged in!");
             loginStatusLabel.setTextFill(Color.GREEN);
+
             SceneController.switchScene("home_page.fxml");
 
-        } else {
+        }
+        // chuck an error message if stuff
+        else {
             loginStatusLabel.setText("Registration unsuccessful! Your credentials do not match our system!");
             loginStatusLabel.setTextFill(Color.RED);
            

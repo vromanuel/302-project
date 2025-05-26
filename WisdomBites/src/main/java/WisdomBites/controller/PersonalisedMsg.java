@@ -22,12 +22,12 @@ public class PersonalisedMsg {
         String name = nameField.getText().isBlank() ? "Student" : nameField.getText();
         String subject = subjectField.getText().isBlank() ? "your subject" : subjectField.getText();
         int streakDays = 4;
-        int weeksStudied = 13;
+        int weeksStudied = 3;
 
         // Run LLM calls in a background thread
         new Thread(() -> {
             String welcome = PMsgController.generateWelcomeMessage(name, subject, streakDays);
-            String prediction = PMsgController.generatePrediction(name, subject, weeksStudied);
+            String prediction = PMsgController.generatePrediction(subject, weeksStudied);
 
             String finalMessage = welcome + "\n\n" + prediction;
 

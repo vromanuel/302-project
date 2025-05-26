@@ -19,6 +19,7 @@ public class UnitDAO {
     private void createStudyUnitTable() {
         try {
             Statement statement = connection.createStatement();
+
             String query = "CREATE TABLE IF NOT EXISTS study_units (" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "userId INTEGER NOT NULL," +
@@ -29,20 +30,30 @@ public class UnitDAO {
                     "FOREIGN KEY (userId) REFERENCES user(id)," +
                     "UNIQUE (userId, unitName, weekNumber)" +
                     ")";
+
             statement.execute(query);
+
         } catch (SQLException e) {
+
             e.printStackTrace();
         }
     }
 
     public List<Unit> getUnitsByName(int userId, String unitName) {
+
         List<Unit> units = new ArrayList<>();
+
         try {
-            String sql = "SELECT * FROM study_units WHERE userId = ? AND unitName = ? ORDER BY weekNumber";
-            PreparedStatement pstmt = connection.prepareStatement(sql);
-            pstmt.setInt(1, userId);
-            pstmt.setString(2, unitName);
-            ResultSet rs = pstmt.executeQuery();
+
+            String sql = "SELECT * FROM study_units WHERE " +
+                    "userId = ? AND " +
+                    "unitName = ? ORDER BY weekNumber";
+            PreparedStatement statement = connection.prepareStatement(sql);
+
+            statement.setInt(1, userId);
+            statement.setString(2, unitName);
+
+            ResultSet rs = statement.executeQuery();
 
             while (rs.next()) {
                 units.add(new Unit(
