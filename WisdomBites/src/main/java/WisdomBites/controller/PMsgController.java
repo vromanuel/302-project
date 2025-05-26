@@ -60,7 +60,7 @@ public class PMsgController {
         return "Let's start an amazing learning streak today!";
     }
 
-    private static String getAIResponse(String prompt, String fallback) {
+    public static String getAIResponse(String prompt, String fallback) {
         try {
             String requestBody = String.format(
                     "{\"model\": \"%s\", \"prompt\": \"%s\", \"stream\": false, \"options\": {\"temperature\": 0.7}}",
@@ -70,7 +70,7 @@ public class PMsgController {
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(OLLAMA_API_URL))
                     .header("Content-Type", "application/json")
-                    .timeout(java.time.Duration.ofSeconds(30))
+                    .timeout(java.time.Duration.ofSeconds(60))
                     .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                     .build();
 

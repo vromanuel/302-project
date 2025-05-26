@@ -64,6 +64,16 @@
                     -fx-background-radius: 20;
                     -fx-font-size: 18px;
                     "/>
+
+            <Button fx:id="syllabusButton" text="Syllabus Manager"
+                    prefWidth="180"
+                    style="
+                    -fx-background-color: #fdd28e;
+                    -fx-text-fill: #5a3921;
+                    -fx-background-radius: 20;
+                    -fx-font-size: 18px;
+                    "/>
+
         </HBox>
 
         <!-- Fortune cookie image -->
@@ -89,7 +99,7 @@
                     -fx-font-size: 18px;
                     "/>
 
-            <Button fx:id="challengesButton" text="Daily Tip"
+            <Button fx:id="dailyTipButton" text="Daily Tip"
                     prefWidth="180"
                     style="
                     -fx-background-color: #fdd28e;
