@@ -58,7 +58,7 @@ public class UnitDAO {
             statement.setInt(1, userId);
             statement.setString(2, unitName);
 
-            // 
+            //
             ResultSet results = statement.executeQuery();
 
             while (results.next()) {
