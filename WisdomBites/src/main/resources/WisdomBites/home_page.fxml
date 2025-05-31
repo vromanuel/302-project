@@ -48,7 +48,7 @@
 
         <!-- Top buttons -->
         <HBox spacing="20" alignment="CENTER">
-            <Button fx:id="predictionsButton" text="Predictions"
+            <Button fx:id="predictionsButton" text="My Predictions"
                     prefWidth="180"
                     style="-fx-background-color: #fdd28e;
                     -fx-text-fill: #5a3921;
@@ -56,7 +56,7 @@
                     -fx-font-size: 18px;
                     "/>
 
-            <Button fx:id="todoButton" text="To-Do-List"
+            <Button fx:id="todoButton" text="To-Do List"
                     prefWidth="180"
                     style="
                     -fx-background-color: #fdd28e;
@@ -64,6 +64,16 @@
                     -fx-background-radius: 20;
                     -fx-font-size: 18px;
                     "/>
+
+            <Button fx:id="syllabusButton" text="Syllabus Manager"
+                    prefWidth="180"
+                    style="
+                    -fx-background-color: #fdd28e;
+                    -fx-text-fill: #5a3921;
+                    -fx-background-radius: 20;
+                    -fx-font-size: 18px;
+                    "/>
+
         </HBox>
 
         <!-- Fortune cookie image -->
@@ -80,7 +90,7 @@
 
         <!-- Bottom buttons -->
         <HBox spacing="30" alignment="CENTER">
-            <Button fx:id="studyTrackerButton" text="My Progress"
+            <Button fx:id="studyTrackerButton" text="Study Tracker"
                     prefWidth="180"
                     style="
                     -fx-background-color: #fdd28e;
@@ -89,7 +99,7 @@
                     -fx-font-size: 18px;
                     "/>
 
-            <Button fx:id="challengesButton" text="Daily Challenges"
+            <Button fx:id="dailyTipButton" text="Daily Tip"
                     prefWidth="180"
                     style="
                     -fx-background-color: #fdd28e;

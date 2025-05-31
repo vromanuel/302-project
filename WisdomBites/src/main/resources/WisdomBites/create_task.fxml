@@ -10,52 +10,38 @@
 
     <VBox spacing="30" alignment="TOP_CENTER" StackPane.alignment="CENTER" style="-fx-padding: 40;">
         <Label text="My To-Do List" style="
-
-
             -fx-text-fill: #5a3921;
-
             -fx-font-size: 28px;
             -fx-font-weight: bold;
-
             -fx-font-family: 'Segoe UI', Arial, sans-serif;" />
 
         <!-- Task Form -->
         <VBox spacing="15" maxWidth="600">
             <TextField fx:id="titleField" promptText="Title"
                        style="
-
                        -fx-background-radius: 10;
                        -fx-padding: 10;
                         "/>
-
-
 
             <TextArea fx:id="descriptionField" promptText="Description" prefRowCount="3"
                       wrapText="true"
                       style="
                       -fx-background-radius: 10;
-
                       -fx-padding: 10;
                        "/>
 
-            <Button fx:id="addTaskButton" text="Add Task" onAction="#handleAddTaskButton"
+            <Button fx:id="addTaskButton" text="Add Task" onAction="#handleAddTask"
                     style="
                     -fx-background-color: #fdd28e;
-
                     -fx-background-radius: 20; -fx-font-size: 16px;
                     "/>
         </VBox>
-
-
 
         <Button fx:id="backButton" text="← Back to Home"
                 style="-fx-background-color: transparent;
                            -fx-text-fill: #5a3921;
                            -fx-underline: true;
-
                            -fx-font-size: 14;
-
-
                            -fx-cursor: hand;" />
 
 
