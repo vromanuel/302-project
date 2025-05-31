@@ -127,6 +127,7 @@ public class TaskController {
                 boolean showing = descLabel.isVisible();
                 descLabel.setVisible(!showing);
                 descLabel.setManaged(!showing);
+
                 dateCreatedLabel.setVisible(!showing);
 
                 dateCreatedLabel.setManaged(!showing);
