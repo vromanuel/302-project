@@ -8,34 +8,35 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="WisdomBites.controller.PersonalisedMsg"
             prefWidth="1600" prefHeight="900"
-            style="-fx-background-color: #f2dbb5;">
+            style="-fx-background-color: #f5e1c0;">
 
-    <!-- Top section with back button and title of the page -->
+    <!-- Top section with plain Back button -->
     <top>
-        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 15;">
-            <Button fx:id="backButton"
-                    text="← Back"
-                    onAction="#handleBack"
+        <HBox alignment="TOP_LEFT" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button fx:id="backButton" text="← Back" onAction="#handleBack"
                     style="-fx-background-color: #fdd28e;
-                       -fx-background-radius: 20;
-                       -fx-font-size: 16px;
-                       -fx-padding: 5 15;
-                       -fx-text-fill: #5a3921;" />
-
-            <Label text="Predictions"
-                   style="-fx-font-size: 20px;
-                      -fx-text-fill: #5a3921;
-                      -fx-font-weight: bold;" />
+               -fx-background-radius: 20;
+               -fx-font-size: 16px;
+               -fx-padding: 5 15;
+               -fx-text-fill: black;" />
         </HBox>
     </top>
 
-
     <!-- Center content -->
     <center>
-        <VBox spacing="20" alignment="TOP_CENTER">
+        <VBox spacing="40" alignment="TOP_CENTER">
             <padding>
-                <Insets top="20" right="40" bottom="20" left="40"/>
+                <Insets top="40" right="40" bottom="40" left="40"/>
             </padding>
+
+            <Label text="Predictions"
+                   style="-fx-font-size: 36px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #5a3921;
+                          -fx-font-family: 'Segoe UI', sans-serif;" />
 
             <TextField fx:id="nameField"
                        promptText="Enter your name"
@@ -45,7 +46,7 @@
                   -fx-border-width: 1;" />
 
             <TextField fx:id="subjectField"
-                       promptText="Enter subject (e.g., CAB 302: Software Development)"
+                       promptText="Enter subject (e.g., CAB 123)"
                        style="-fx-font-size: 16px;
                   -fx-padding: 10;
                   -fx-border-color: black;
@@ -72,8 +73,7 @@
                            -fx-font-size: 20px;
                            -fx-font-weight: bold;
                            -fx-padding: 10 25;
-                           -fx-text-fill: #5a3921;"/>
-
+                           -fx-text-fill: black;" />
         </VBox>
     </center>
 </BorderPane>
