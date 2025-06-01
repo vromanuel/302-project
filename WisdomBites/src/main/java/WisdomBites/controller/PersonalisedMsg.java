@@ -36,7 +36,7 @@ public class PersonalisedMsg {
                     .filter(u -> !u.isCompleted())
                     .map(Unit::getTaskDescription)
                     .filter(desc -> desc != null && !desc.isBlank())
-                    .collect(Collectors.toList());
+                    .collect(java.util.stream.Collectors.toList());
 
             // Get AI messages
             String welcome = PMsgController.generateWelcomeMessage(name, subject, streakDays);
