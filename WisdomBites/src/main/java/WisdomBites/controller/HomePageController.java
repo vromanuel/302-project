@@ -53,7 +53,7 @@ public class HomePageController {
             SceneController.switchScene("personalised_msg.fxml");
         });
         todoButton.setOnAction((e -> SceneController.switchScene("create_task.fxml")));
-        syllabusButton.setOnAction(e -> SceneController.switchScene("syllabus_page.fxml"));
+        syllabusButton.setOnAction(e -> SceneController.switchScene("syllabus_page_view.fxml"));
         fortuneButton.setOnAction(e -> SceneController.switchScene("fortune_view.fxml"));
         studyTrackerButton.setOnAction((e -> SceneController.switchScene("StudyTracker.fxml")));
         dailyTipButton.setOnAction(e -> SceneController.switchScene("daily_tip_view.fxml"));
