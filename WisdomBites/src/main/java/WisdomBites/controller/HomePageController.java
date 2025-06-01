@@ -49,13 +49,14 @@ public class HomePageController {
         navTimeUpdater.play();
 
         // button actions
-        fortuneButton.setOnAction(e -> SceneController.switchScene("fortune_view.fxml"));
         predictionsButton.setOnAction(e -> {
             SceneController.switchScene("personalised_msg.fxml");
         });
         todoButton.setOnAction((e -> SceneController.switchScene("create_task.fxml")));
-        studyTrackerButton.setOnAction((e -> SceneController.switchScene("StudyTracker.fxml")));
         syllabusButton.setOnAction(e -> SceneController.switchScene("syllabus_page.fxml"));
+        fortuneButton.setOnAction(e -> SceneController.switchScene("fortune_view.fxml"));
+        studyTrackerButton.setOnAction((e -> SceneController.switchScene("StudyTracker.fxml")));
+        dailyTipButton.setOnAction(e -> SceneController.switchScene("daily_tip_view.fxml"));
         logOutButton.setOnAction(e -> logout());
     }
 }

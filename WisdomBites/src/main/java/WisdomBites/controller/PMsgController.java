@@ -58,7 +58,7 @@ public class PMsgController {
         return "Let's start an amazing learning streak today!";
     }
 
-    private static String getAIResponse(String prompt, String fallback) {
+    public static String getAIResponse(String prompt, String fallback) {
         try {
             String requestBody = String.format(
                     "{\"model\": \"%s\", \"prompt\": \"%s\", \"stream\": false, \"options\": {\"temperature\": 0.7}}",
