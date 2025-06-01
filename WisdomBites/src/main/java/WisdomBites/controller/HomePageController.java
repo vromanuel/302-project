@@ -19,7 +19,7 @@ public class HomePageController {
     @FXML private ImageView cookieImage;
     @FXML private Label navDateTime;
 
-    @FXML private Button predictionsButton, todoButton, fortuneButton, studyTrackerButton, challengesButton;
+    @FXML private Button predictionsButton, todoButton, fortuneButton, studyTrackerButton, syllabusButton, dailyTipButton;
     @FXML private Button logOutButton;
 
     public static void logout()
@@ -50,14 +50,12 @@ public class HomePageController {
 
         // button actions
         fortuneButton.setOnAction(e -> SceneController.switchScene("fortune_view.fxml"));
-
         predictionsButton.setOnAction(e -> {
             SceneController.switchScene("personalised_msg.fxml");
         });
-
         todoButton.setOnAction((e -> SceneController.switchScene("create_task.fxml")));
-
         studyTrackerButton.setOnAction((e -> SceneController.switchScene("StudyTracker.fxml")));
+        syllabusButton.setOnAction(e -> SceneController.switchScene("syllabus_page.fxml"));
         logOutButton.setOnAction(e -> logout());
     }
 }
