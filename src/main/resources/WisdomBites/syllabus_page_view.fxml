@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="WisdomBites.controller.SyllabusController"
+            style="-fx-background-color: #f2dbb5;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 15;">
+            <Button fx:id="backButton" text="← Back" onAction="#handleBack"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 16px; -fx-padding: 5 15;" />
+            <Label text="Syllabus Manager"
+                   style="-fx-font-size: 20px;
+                       -fx-text-fill: #5a3921;
+                       -fx-font-weight: bold; " />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 20;">
+            <!-- ComboBox for Unit -->
+            <ComboBox fx:id="unitComboBox"
+                      promptText="Select a Unit"
+                      style="-fx-font-size: 16px; -fx-pref-width: 300;" />
+
+            <!-- Grid of Weeks -->
+            <GridPane hgap="30" vgap="15" alignment="CENTER">
+
+                <!-- Row 1 -->
+                <HBox spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                    <Label text="Week 1" minWidth="50"/><TextField fx:id="week1Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+                <HBox spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1">
+                    <Label text="Week 2" minWidth="50"/><TextField fx:id="week2Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+
+                <!-- Row 2 -->
+                <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                    <Label text="Week 3" minWidth="50"/><TextField fx:id="week3Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+                <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                    <Label text="Week 4" minWidth="50"/><TextField fx:id="week4Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+
+                <!-- Row 3 -->
+                <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                    <Label text="Week 5" minWidth="50"/><TextField fx:id="week5Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+                <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                    <Label text="Week 6" minWidth="50"/><TextField fx:id="week6Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+
+                <!-- Row 4 -->
+                <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="0">
+                    <Label text="Week 7" minWidth="50"/><TextField fx:id="week7Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+                <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="1">
+                    <Label text="Week 8" minWidth="50"/><TextField fx:id="week8Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+
+                <!-- Row 5 -->
+                <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="0">
+                    <Label text="Week 9" minWidth="50"/><TextField fx:id="week9Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+                <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                    <Label text="Week 10" minWidth="50"/><TextField fx:id="week10Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+
+                <!-- Row 6 -->
+                <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="0">
+                    <Label text="Week 11" minWidth="50"/><TextField fx:id="week11Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+                <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="1">
+                    <Label text="Week 12" minWidth="50"/><TextField fx:id="week12Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+
+                <!-- Row 7: Week 13 -->
+                <HBox spacing="10" GridPane.rowIndex="6" GridPane.columnIndex="0">
+                    <Label text="Week 13" minWidth="50"/>
+                    <TextField fx:id="week13Field" promptText="Topic" prefWidth="300"/>
+                </HBox>
+
+                <!-- Row 8 (Save Button centered under Week 13) -->
+                <HBox alignment="CENTER" GridPane.rowIndex="7" GridPane.columnIndex="0" GridPane.columnSpan="2">
+                    <Button text="Save Syllabus"
+                            onAction="#handleSave"
+                            style="-fx-background-color: #fdd28e;
+                               -fx-background-radius: 20;
+                               -fx-font-size: 20px;
+                               -fx-font-weight: bold;
+                               -fx-text-fill: #5a3921;
+                               -fx-padding: 10 30;" />
+                </HBox>
+            </GridPane>
+        </VBox>
+    </center>
+
+</BorderPane>

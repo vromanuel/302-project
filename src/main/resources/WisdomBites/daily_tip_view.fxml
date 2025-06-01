@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="WisdomBites.controller.DailyTipController"
+            style="-fx-background-color: #f5e1c0;" prefWidth="900" prefHeight="650">
+
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT" style="-fx-padding: 20;">
+            <Button text="← Back" onAction="#handleBack"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 16px;"/>
+            <Label text="Tip of the Day"
+                   style="-fx-font-size: 24px; -fx-text-fill: #5a3921; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="30">
+            <HBox alignment="CENTER">
+                <TextArea fx:id="tipBox" editable="false" wrapText="true"
+                          style="-fx-font-size: 18px; -fx-text-fill: black;
+                             -fx-background-color: white; -fx-border-color: #5a3921;
+                             -fx-border-width: 2; -fx-padding: 20;"
+                          prefWidth="800" prefHeight="300"/>
+            </HBox>
+            <Button text="Refresh Tip" onAction="#handleTip"
+                    style="-fx-background-color: #fdd28e; -fx-background-radius: 20; -fx-font-size: 18px; -fx-text-fill: #5a3921;"/>
+        </VBox>
+    </center>
+
+</BorderPane>
