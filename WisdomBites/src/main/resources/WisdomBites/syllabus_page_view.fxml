@@ -32,56 +32,81 @@
 
                 <!-- Row 1 -->
                 <HBox spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="0">
-                    <Label text="Week 1" minWidth="50"/><TextField fx:id="week1Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 1" minWidth="50"/>
+                    <TextField fx:id="week1Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week1Done"/>
                 </HBox>
                 <HBox spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1">
-                    <Label text="Week 2" minWidth="50"/><TextField fx:id="week2Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 2" minWidth="50"/>
+                    <TextField fx:id="week2Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week2Done"/>
                 </HBox>
 
                 <!-- Row 2 -->
                 <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="0">
-                    <Label text="Week 3" minWidth="50"/><TextField fx:id="week3Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 3" minWidth="50"/>
+                    <TextField fx:id="week3Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week3Done"/>
                 </HBox>
                 <HBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="1">
-                    <Label text="Week 4" minWidth="50"/><TextField fx:id="week4Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 4" minWidth="50"/>
+                    <TextField fx:id="week4Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week4Done"/>
                 </HBox>
 
                 <!-- Row 3 -->
                 <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="0">
-                    <Label text="Week 5" minWidth="50"/><TextField fx:id="week5Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 5" minWidth="50"/>
+                    <TextField fx:id="week5Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week5Done"/>
                 </HBox>
                 <HBox spacing="10" GridPane.rowIndex="2" GridPane.columnIndex="1">
-                    <Label text="Week 6" minWidth="50"/><TextField fx:id="week6Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 6" minWidth="50"/>
+                    <TextField fx:id="week6Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week6Done"/>
                 </HBox>
 
                 <!-- Row 4 -->
                 <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="0">
-                    <Label text="Week 7" minWidth="50"/><TextField fx:id="week7Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 7" minWidth="50"/>
+                    <TextField fx:id="week7Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week7Done"/>
                 </HBox>
                 <HBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="1">
-                    <Label text="Week 8" minWidth="50"/><TextField fx:id="week8Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 8" minWidth="50"/>
+                    <TextField fx:id="week8Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week8Done"/>
                 </HBox>
 
                 <!-- Row 5 -->
                 <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="0">
-                    <Label text="Week 9" minWidth="50"/><TextField fx:id="week9Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 9" minWidth="50"/>
+                    <TextField fx:id="week9Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week9Done"/>
                 </HBox>
                 <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
-                    <Label text="Week 10" minWidth="50"/><TextField fx:id="week10Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 10" minWidth="50"/>
+                    <TextField fx:id="week10Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week10Done"/>
                 </HBox>
 
                 <!-- Row 6 -->
                 <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="0">
-                    <Label text="Week 11" minWidth="50"/><TextField fx:id="week11Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 11" minWidth="50"/>
+                    <TextField fx:id="week11Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week11Done"/>
                 </HBox>
                 <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="1">
-                    <Label text="Week 12" minWidth="50"/><TextField fx:id="week12Field" promptText="Topic" prefWidth="300"/>
+                    <Label text="Week 12" minWidth="50"/>
+                    <TextField fx:id="week12Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week12Done"/>
                 </HBox>
 
                 <!-- Row 7: Week 13 -->
                 <HBox spacing="10" GridPane.rowIndex="6" GridPane.columnIndex="0">
                     <Label text="Week 13" minWidth="50"/>
                     <TextField fx:id="week13Field" promptText="Topic" prefWidth="300"/>
+                    <CheckBox fx:id="week13Done"/>
                 </HBox>
 
                 <!-- Row 8 (Save Button centered under Week 13) -->
