@@ -28,7 +28,7 @@
     </top>
 
 
-    <!-- Center content -->
+    <!-- Centre content -->
     <center>
         <VBox spacing="20" alignment="TOP_CENTER">
             <padding>

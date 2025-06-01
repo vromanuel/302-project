@@ -30,22 +30,34 @@ public class PMsgController {
     }
 
 
-    public static String generatePrediction(String name, String subject, int weeksStudied) {
+    public static String generatePrediction(String name, String subject, int weeksStudied, int weeksLeft, List<String> topicsLeft) {
+        String topicsStr = topicsLeft.isEmpty()
+                ? "No specific topics left."
+                : String.join(", ", topicsLeft);
+
         String prompt = String.format(
-                "Create a short progress prediction for %s who has studied %s for %d weeks. " +
-                        "Use second person ('you') and speak directly to them. Avoid repeating their name. " +
-                        "Give a warm, encouraging assessment of their current progress and future potential. " +
-                        "Respond naturally, without any quotation marks." +
-                        "Be specific about the subject and time frame. ",
-                name, subject, weeksStudied
+                "Create a short and personalized learning prediction for a student studying %s. " +
+                        "They have completed %d out of 13 weeks and have %d weeks left. " +
+                        "Topics still to cover include: %s. " +
+                        "Speak in second person (using 'you'), give encouraging feedback on progress and practical motivation to finish the rest. " +
+                        "Do not mention their name. Limit the response to 3 sentences. " +
+                        "Be naturally supportive and clear, with no quotes or generic fluff.",
+                subject, weeksStudied, weeksLeft, topicsStr
         );
 
-        return getAIResponse(prompt,
-                weeksStudied >= 6 ? "You're mastering " + subject + "! Keep up the excellent work!" :
-                weeksStudied >= 3 ? "At this rate, you'll be proficient in " + subject + " very soon!" :
-                "Every session in " + subject + " brings you closer to mastery!"
-        );
+        String fallback;
+        if (weeksStudied >= 10)
+            fallback = "You're nearly done with " + subject + "! Keep the momentum and tackle the final topics confidently.";
+        else if (weeksStudied >= 6)
+            fallback = "You're past the halfway mark! Stay focused and work through the rest of the syllabus one step at a time.";
+        else if (weeksStudied >= 3)
+            fallback = "You've made a solid start in " + subject + ". Keep a steady pace and you’ll master the material.";
+        else
+            fallback = "Every bit of effort counts. Start with the upcoming topics and build your progress week by week.";
+
+        return getAIResponse(prompt, fallback);
     }
+
 
     private static String getGreeting() {
         LocalTime now = LocalTime.now();
